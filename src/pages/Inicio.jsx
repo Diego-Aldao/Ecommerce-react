@@ -1,6 +1,5 @@
 import React from "react";
-import CardInicio from "./CardInicio";
-import { useState } from "react";
+import CardInicio from "../components/CardInicio";
 
 import styled from "styled-components";
 
@@ -11,10 +10,10 @@ const Contenedor = styled.section`
   grid-gap: 15px;
 `;
 
-const Inicio = ({ data, setProducto }) => {
+const Inicio = () => {
   return (
     <Contenedor>
-      <CardInicio data={data} setProducto={setProducto} />
+      <CardInicio />
     </Contenedor>
   );
 };
