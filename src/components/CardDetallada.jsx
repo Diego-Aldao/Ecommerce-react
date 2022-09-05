@@ -1,19 +1,9 @@
 import React from "react";
-import jsonData from "../data/productos.json";
-import styled from "styled-components";
+import useSingleProducto from "../hooks/useSingleProducto";
 
-const Item = styled.div`
-  width: 100%;
-  img {
-    width: 100%;
-    height: 250px;
-  }
-`;
+const Card = ({ idProducto }) => {
+  const { productoDetallado } = useSingleProducto({ idProducto });
 
-const Card = ({ data, producto }) => {
-  let productoStorage = localStorage.getItem("producto");
-  let productoDetallado = producto ? producto : JSON.parse(productoStorage);
-  console.log(productoDetallado);
   return (
     <div key={productoDetallado.id}>
       <img src={`http://${productoDetallado.imageUrl}`} alt="" />
