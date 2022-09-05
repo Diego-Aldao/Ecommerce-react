@@ -2,21 +2,25 @@ import React from "react";
 import useSingleProducto from "../hooks/useSingleProducto";
 
 const Card = ({ idProducto }) => {
-  const { productoDetallado } = useSingleProducto({ idProducto });
+  const { productoDetallado, productoCache } = useSingleProducto({
+    idProducto,
+  });
+
+  const producto = productoDetallado ? productoDetallado : productoCache;
 
   return (
-    <div key={productoDetallado.id}>
-      <img src={`http://${productoDetallado.imageUrl}`} alt="" />
+    <div key={producto.id}>
+      <img src={`http://${producto.imageUrl}`} alt="" />
       <h1>
-        {productoDetallado.name}
-        <span>{productoDetallado.brandName}</span>
+        {producto.name}
+        <span>{producto.brandName}</span>
       </h1>
       <span>precio</span>
       <div>cuotas sin interes</div>
       <div>
         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dignissimos,
       </div>
-      <p>color: {productoDetallado.colour}</p>
+      <p>color: {producto.colour}</p>
       <p>talla</p>
       <select name="" id="">
         <option value="">talla x</option>
@@ -34,7 +38,7 @@ const Card = ({ idProducto }) => {
       </div>
       <div className="detalles">
         <p>
-          <span>categoria</span> <span>{productoDetallado.brandName}</span>{" "}
+          <span>categoria</span> <span>{producto.brandName}</span>{" "}
         </p>
         <ul>
           <li>detalle random</li>
