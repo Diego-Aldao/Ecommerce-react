@@ -1,16 +1,15 @@
 import "./App.css";
 import Inicio from "./pages/Inicio";
-import { Route, Routes } from "react-router-dom";
+import { Link, Route } from "wouter";
 import Detalle from "./pages/Detalle";
 import { ProductsContextProvider } from "./context/ProductsContext";
 
 function App() {
   return (
     <ProductsContextProvider>
-      <Routes>
-        <Route path="/" element={<Inicio />} />
-        <Route path="/detalle/:id" element={<Detalle />} />
-      </Routes>
+      <Link to="/">buenas</Link>
+      <Route path="/" component={Inicio} />
+      <Route component={Detalle} path="/detalle/:id" />
     </ProductsContextProvider>
   );
 }
