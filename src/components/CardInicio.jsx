@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import { Link } from "react-router-dom";
+import { Link } from "wouter";
+import useData from "../hooks/useData";
 
 const Item = styled.div`
   width: 100%;
@@ -10,23 +11,14 @@ const Item = styled.div`
   }
 `;
 
-const CardInicio = ({ data, setProducto }) => {
-  const handleClick = (productoClickeado) => {
-    setProducto(productoClickeado);
-    localStorage.setItem("producto", JSON.stringify(productoClickeado));
-  };
+const CardInicio = () => {
+  const { productos } = useData();
 
-  let item = data.map((producto) => {
+  let item = productos.map((producto) => {
     let precio = producto.price.current.text;
     return (
-      <Item
-        data-producto={producto.id}
-        key={producto.id}
-        onClick={() => {
-          handleClick(producto);
-        }}
-      >
-        <Link to="/detalle">
+      <Item key={producto.id}>
+        <Link to={`/detalle/${producto.id}`}>
           <img src={`http://${producto.imageUrl}`} alt="" />
           <h2>{producto.name}</h2>
           <span>{precio}</span>
