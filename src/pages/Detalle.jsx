@@ -1,8 +1,8 @@
 import React from "react";
-import CardDetallada from "../components/CardDetallada";
+import ProductoDetallado from "../components/ProductoDetallado";
 
 const Detalle = ({ params }) => {
-  return <CardDetallada idProducto={params.id} />;
+  return <ProductoDetallado idProducto={params.id} />;
 };
 
 export default Detalle;
