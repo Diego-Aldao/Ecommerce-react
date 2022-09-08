@@ -15,7 +15,7 @@ const Item = styled.li`
   width: 100%;
   margin-bottom: 20px;
   height: 78px;
-  background: red;
+  background: url(${(props) => props.background});
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -35,6 +35,52 @@ const Titulo = styled.span`
   }
 `;
 
-return <Contenido></Contenido>;
+const ListaNavMovil = ({ contenido }) => {
+  const botonHome = contenido
+    .filter((obj) => obj.content.title == "Home")
+    .map((obj) => {
+      return (
+        <Item
+          className="btn-home"
+          key={obj.children[0].id}
+          background={obj.children[0].content.mobileImageUrl}
+        >
+          <Link to="/mujer">
+            <Titulo>{obj.children[0].content.title}</Titulo>
+          </Link>
+        </Item>
+      );
+    });
+
+  const botonesCategorias = contenido
+    .filter((obj) => obj.content.title == "Categories")
+    .map((obj) => {
+      return obj.children.map((child) => {
+        return (
+          <Item key={child.id} background={child.content.mobileImageUrl}>
+            <Link to="/mujer">
+              {child.content.subTitle ? (
+                <>
+                  <Titulo className="compartido">{child.content.title}</Titulo>
+                  <Titulo className="compartido">
+                    {child.content.subTitle}
+                  </Titulo>
+                </>
+              ) : (
+                <Titulo>{child.content.title}</Titulo>
+              )}
+            </Link>
+          </Item>
+        );
+      });
+    });
+
+  return (
+    <Contenido>
+      {botonHome}
+      {botonesCategorias}
+    </Contenido>
+  );
+};
 
 export default ListaNavMovil;
