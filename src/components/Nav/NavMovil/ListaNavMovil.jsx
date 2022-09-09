@@ -9,6 +9,7 @@ const Contenido = styled.ul`
   padding: 20px;
   overflow: scroll;
   height: 100vh;
+  padding-bottom: 50px;
 `;
 
 const Item = styled.li`
@@ -30,12 +31,27 @@ const Titulo = styled.span`
   padding: 12px;
   display: flex;
   align-items: center;
-  &.compartido {
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  &.especial,
+  &.subtitulo {
     height: 50%;
+  }
+  &.especial {
+    font-weight: 800;
+  }
+  &.subtitulo {
+    font-weight: 400;
+    letter-spacing: 0;
   }
 `;
 
-const ListaNavMovil = ({ contenido }) => {
+const ListaNavMovil = ({ contenido, setPosicion, setCategoria }) => {
+  const handleClick = (categoria) => {
+    setCategoria(categoria);
+    setPosicion((prevValue) => !prevValue);
+  };
   const botonHome = contenido
     .filter((obj) => obj.content.title == "Home")
     .map((obj) => {
@@ -57,19 +73,21 @@ const ListaNavMovil = ({ contenido }) => {
     .map((obj) => {
       return obj.children.map((child) => {
         return (
-          <Item key={child.id} background={child.content.mobileImageUrl}>
-            <Link to="/mujer">
-              {child.content.subTitle ? (
-                <>
-                  <Titulo className="compartido">{child.content.title}</Titulo>
-                  <Titulo className="compartido">
-                    {child.content.subTitle}
-                  </Titulo>
-                </>
-              ) : (
-                <Titulo>{child.content.title}</Titulo>
-              )}
-            </Link>
+          <Item
+            key={child.id}
+            onClick={() => {
+              handleClick(child);
+            }}
+            background={child.content.mobileImageUrl}
+          >
+            {child.content.subTitle ? (
+              <>
+                <Titulo className="especial">{child.content.title}</Titulo>
+                <Titulo className="subtitulo">{child.content.subTitle}</Titulo>
+              </>
+            ) : (
+              <Titulo>{child.content.title}</Titulo>
+            )}
           </Item>
         );
       });
