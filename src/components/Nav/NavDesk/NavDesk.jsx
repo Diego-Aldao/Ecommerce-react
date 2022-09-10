@@ -23,28 +23,37 @@ const Navegacion = styled.nav`
   }
 `;
 
-const NavDesk = () => {
+const NavDesk = ({ contenido }) => {
+  const categorias = contenido[1].children.filter(
+    (obj) => obj.channelExclusions.length !== 1
+  );
   const [visible, setVisible] = useState(false);
+  const [hijos, setHijos] = useState();
 
-  const handleMouseOver = () => {
+  const handleMouseOver = (children) => {
+    console.log(children);
+    setHijos(children);
     setVisible(true);
   };
+
+  const botonesCategorias = categorias.map((categoria) => {
+    return (
+      <button
+        key={categoria.id}
+        onMouseOver={() => {
+          handleMouseOver(categoria.children);
+        }}
+      >
+        {categoria.content.title}
+      </button>
+    );
+  });
 
   return (
     <>
       <Navegacion>
-        <button onMouseOver={handleMouseOver}>rebajas</button>
-        <Dropdown visible={visible} />
-        <button>novedades</button>
-        <button>ropa</button>
-        <button>vestidos</button>
-        <button>rebajas</button>
-        <button>novedades</button>
-        <button>ropa</button>
-        <button>vestidos</button>
-        <button>rebajas</button>
-        <button>novedades</button>
-        <button>ropa</button>
+        {botonesCategorias}
+        <Dropdown hijos={hijos} visible={visible} />
       </Navegacion>
     </>
   );
