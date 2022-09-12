@@ -9,7 +9,10 @@ import ListadoProductos from "./pages/ListadoProductos";
 function App() {
   return (
     <ProductsContextProvider>
-      <Route path="/" component={Inicio} />
+      <Switch>
+        <Route path="/" component={Inicio} />
+        <Route path="/:genero" component={Inicio} />
+      </Switch>
       <Route component={Detalle} path="/detalle/:id" />
       <Route component={Search} path="/search/:keyword" />
       <Switch>
