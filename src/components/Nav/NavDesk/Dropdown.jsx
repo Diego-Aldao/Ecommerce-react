@@ -1,5 +1,7 @@
 import React from "react";
 import styled from "styled-components";
+import { useLocation } from "wouter";
+import useDestino from "../../../hooks/useDestino";
 
 const Contenido = styled.div`
   position: absolute;
@@ -7,25 +9,24 @@ const Contenido = styled.div`
   top: 50px;
   left: 0px;
   width: 100%;
-  padding: 0px 32px;
-  font-family: "Josefin Sans", sans-serif;
-  display: ${({ visible }) => (visible ? "block" : "none")};
-  ul {
-    list-style: none;
-  }
+  padding: 0px;
+  height: ${({ visible }) => (visible ? "auto" : "0px")};
 `;
 
 const ContenedorLista = styled.ul`
-  padding: 24px 10px;
   display: flex;
   background: #eee;
-  color: black;
+  height: 100%;
+  overflow: hidden;
+  opacity: ${({ visible }) => (visible ? "1" : "0")};
+  padding: ${({ visible }) => (visible ? "24px 10px" : "0")};
+  transition: opacity 0.3s ease-in-out;
   .noTitle {
     display: none;
   }
 `;
 
-const ItemLista = styled.li`
+const ListaPrincipal = styled.li`
   flex: ${({ flex }) => (flex ? flex : 1)};
   padding: 0px 20px;
   border-right: 1px solid #00000022;
@@ -45,14 +46,11 @@ const ItemLista = styled.li`
   }
 `;
 
-const ListaInterior = styled.ul`
+const ListaSecciones = styled.ul`
   color: #666;
   font-size: 14px;
   column-count: ${({ column }) => column && column};
-  li {
-    text-align: start;
-    padding: 7px 0px;
-  }
+
   .li-textList,
   .li-list {
     div {
@@ -65,6 +63,7 @@ const ListaInterior = styled.ul`
       padding: 10px 0px;
     }
   }
+
   &.gridCircleImageLarge {
     display: flex;
     flex-wrap: wrap;
@@ -77,8 +76,6 @@ const ListaInterior = styled.ul`
       border: 1px solid #cccccc;
       img {
         border-radius: 50%;
-        width: 100%;
-        height: 100%;
       }
     }
     span {
@@ -95,28 +92,62 @@ const ListaInterior = styled.ul`
       padding: 0px 5px 20px;
     }
   }
-  &.thirdMarketingImage {
+
+  &.circleImageListLarge {
+    li {
+      display: flex;
+      align-items: center;
+      padding: 5px 0px;
+    }
+    div {
+      width: 40px;
+      height: 40px;
+      margin-right: 10px;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 1px solid #c4c4c4;
+    }
+    span {
+      height: 52px;
+      width: 117px;
+      border-bottom: 1px solid #ccc;
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &.thirdMarketingImage,
+  &.carousel {
     li {
       padding: 0px;
       display: flex;
       flex-direction: column;
-      position: relative;
       margin-bottom: 10px;
     }
-    img {
+    div {
+      height: 97px;
+      width: 248px;
       border: 1px solid #cccccc;
-      width: 100%;
     }
     span {
       position: absolute;
-      top: 0px;
       left: 0px;
+      bottom: 0px;
       height: 100%;
       display: flex;
       align-items: center;
-      text-align: start;
-      max-width: 70%;
-      padding: 0px 32px 0px 10px;
+      max-width: 58%;
+      padding-left: 10px;
+    }
+  }
+  &.thirdMarketingImage,
+  &.fullMarketingImage,
+  &.halfMarketingImage,
+  &.carousel {
+    li {
+      position: relative;
+    }
+    span {
       font-size: 16px;
       font-weight: 700;
       text-transform: uppercase;
@@ -125,19 +156,12 @@ const ListaInterior = styled.ul`
       line-height: 1.2;
     }
   }
-  &.fullMarketingImage {
-    column-count: 2;
-    li {
-      position: relative;
-    }
+
+  &.fullMarketingImage,
+  &.halfMarketingImage {
     div {
-      width: 240px;
-      height: 270px;
       position: relative;
-      img {
-        width: 100%;
-        height: 100%;
-      }
+      width: 240px;
     }
     div:after {
       content: "";
@@ -154,103 +178,63 @@ const ListaInterior = styled.ul`
       left: 0px;
       width: 100%;
       max-width: 240px;
-      font-size: 16px;
-      font-weight: 700;
-      text-transform: uppercase;
-      color: #2d2d2d;
-      letter-spacing: 1px;
-      line-height: 1.2;
       text-align: center;
     }
   }
-  &.circleImageListLarge {
-    li {
-      display: flex;
-      align-items: center;
-      padding: 5px 0px;
-    }
-    div {
-      width: 40px;
-      height: 40px;
-      margin-right: 10px;
-      border-radius: 50%;
-      overflow: hidden;
-      border: 1px solid #c4c4c4;
-    }
 
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: fill;
-    }
-    span {
-      height: 52px;
-      width: 117px;
-      border-bottom: 1px solid #ccc;
-      display: flex;
-      align-items: center;
+  &.fullMarketingImage {
+    column-count: ${({ column }) => column && column};
+    div {
+      width: 240px;
+      height: 270px;
     }
   }
   &.halfMarketingImage {
     div {
-      position: relative;
-      width: 250px;
       border: 1px solid #dfdfdf;
-      height: 100%;
-      overflow: hidden;
-      img {
-        width: 100%;
-        height: 100%;
-        object-fit: fill;
-      }
     }
-    div:after {
-      content: "";
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      bottom: 2px;
-      left: 0px;
-      background: linear-gradient(#20202014, #ffffff97);
-    }
-    li {
-      position: relative;
-    }
-    span {
-      position: absolute;
-      bottom: 10px;
-      left: 0px;
-      width: 100%;
-      max-width: 250px;
-      font-size: 16px;
-      font-weight: 700;
-      text-transform: uppercase;
-      color: #2d2d2d;
-      letter-spacing: 1px;
-      line-height: 1.2;
-      text-align: center;
+  }
+`;
+
+const Categoria = styled.li`
+  text-align: start;
+  padding: 7px 0px;
+  cursor: pointer;
+  &:hover {
+    color: #1e65ff;
+    div {
+      border-color: #1e65ff;
     }
   }
 `;
 
 const Dropdown = ({ hijos, visible, setVisible }) => {
+  const [location, setLocation] = useLocation();
+
   const handleMouseOver = () => {
     setVisible(true);
   };
   const handleMouseLeave = () => {
     setVisible(false);
   };
+
+  const handleLocation = (link) => {
+    const { destino } = useDestino(link);
+    setLocation(destino);
+  };
+
   const hijosDesk = hijos
     ? hijos.filter((hijo) => hijo.channelExclusions.length !== 1)
     : null;
+
   const lista = hijosDesk
     ? hijosDesk.map((hijo) => {
         return (
-          <ItemLista key={hijo.id} flex={hijo.display.webLargeColumnSpan}>
+          <ListaPrincipal key={hijo.id} flex={hijo.display.webLargeColumnSpan}>
             <h4 className={hijo.style.webLargeStyleType}>
               <span>{hijo.content.title}</span>
             </h4>
-            <ListaInterior
+            <ListaSecciones
               className={
                 hijo.display.webLargeTemplateName.length !== 0
                   ? hijo.display.webLargeTemplateName
@@ -260,7 +244,10 @@ const Dropdown = ({ hijos, visible, setVisible }) => {
             >
               {hijo.children.map((item) => {
                 return (
-                  <li
+                  <Categoria
+                    onClick={() => {
+                      handleLocation(item.link.webUrl);
+                    }}
                     key={item.id}
                     className={
                       hijo.display.webLargeTemplateName.length !== 0
@@ -272,11 +259,11 @@ const Dropdown = ({ hijos, visible, setVisible }) => {
                       <img src={item.content.webLargeImageUrl} alt="" />
                     </div>
                     <span>{item.content.title}</span>
-                  </li>
+                  </Categoria>
                 );
               })}
-            </ListaInterior>
-          </ItemLista>
+            </ListaSecciones>
+          </ListaPrincipal>
         );
       })
     : "";
@@ -287,7 +274,7 @@ const Dropdown = ({ hijos, visible, setVisible }) => {
       onMouseOver={handleMouseOver}
       onMouseLeave={handleMouseLeave}
     >
-      <ContenedorLista>{lista}</ContenedorLista>
+      <ContenedorLista visible={visible}>{lista}</ContenedorLista>
     </Contenido>
   );
 };

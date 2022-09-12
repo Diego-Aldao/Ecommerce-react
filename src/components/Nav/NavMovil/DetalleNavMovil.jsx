@@ -2,13 +2,11 @@ import React from "react";
 import styled from "styled-components";
 import { BsArrowLeft } from "react-icons/bs";
 import { useLocation } from "wouter";
+import useDestino from "../../../hooks/useDestino";
 
 const ContenidoPrincipal = styled.div`
   width: 100%;
   padding-bottom: 50px;
-  ul {
-    list-style: none;
-  }
 `;
 
 const Header = styled.div`
@@ -84,9 +82,16 @@ const Item = styled.li`
     border-radius: 50%;
     img {
       border-radius: 50%;
-      width: 100%;
-      height: 100%;
-      object-fit: fill;
+    }
+  }
+  &.especial-grande,
+  &.especial-pequeño {
+    margin-bottom: 10px;
+    border: none;
+    span {
+      text-transform: uppercase;
+      font-weight: 700;
+      line-height: 1.2;
     }
   }
   &.especial-pequeño {
@@ -95,33 +100,21 @@ const Item = styled.li`
     height: 80px;
     justify-content: space-between;
     padding: 12px;
-    margin-bottom: 10px;
-    border: none;
     div {
       min-height: 62px;
       min-width: 62px;
       margin: 0;
       margin-left: 10px;
     }
-    span {
-      font-weight: 700;
-      font-size: 1.1rem;
-      text-transform: uppercase;
-    }
   }
   &.especial-grande {
     height: 85px;
-    margin-bottom: 10px;
-    border: none;
     span {
       padding: 10px;
       position: relative;
       z-index: 2;
       color: white;
-      text-transform: uppercase;
-      font-weight: 800;
       max-width: 70%;
-      line-height: 1.2;
     }
     div {
       position: absolute;
@@ -131,6 +124,7 @@ const Item = styled.li`
       border-radius: 0px;
       img {
         border-radius: 0px;
+        object-fit: cover;
       }
     }
   }
@@ -147,10 +141,8 @@ const DetalleNavMovil = ({ categoria, setPosicion }) => {
   };
 
   const handleLocation = (link) => {
-    let ruta = link.replaceAll("https://www.asos.com/es/", "/").split("?", 2);
-    let url = ruta[0];
-    let querys = ruta[1];
-    setLocation(`${url}${querys}`);
+    const { destino } = useDestino(link);
+    setLocation(destino);
   };
 
   let contenidoCategorias = categoria

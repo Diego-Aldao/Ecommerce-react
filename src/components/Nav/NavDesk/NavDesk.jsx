@@ -31,30 +31,34 @@ const NavDesk = ({ contenido }) => {
   const [hijos, setHijos] = useState();
 
   const handleMouseOver = (children) => {
-    console.log(children);
     setHijos(children);
     setVisible(true);
   };
 
+  const handleMouseLeave = () => {
+    setVisible(false);
+  };
+
   const botonesCategorias = categorias.map((categoria) => {
     return (
-      <button
-        key={categoria.id}
-        onMouseOver={() => {
-          handleMouseOver(categoria.children);
-        }}
-      >
-        {categoria.content.title}
-      </button>
+      <>
+        <button
+          key={categoria.id}
+          onMouseOver={() => {
+            handleMouseOver(categoria.children);
+          }}
+          onMouseLeave={handleMouseLeave}
+        >
+          {categoria.content.title}
+        </button>
+        <Dropdown hijos={hijos} visible={visible} setVisible={setVisible} />
+      </>
     );
   });
 
   return (
     <>
-      <Navegacion>
-        {botonesCategorias}
-        <Dropdown hijos={hijos} visible={visible} />
-      </Navegacion>
+      <Navegacion>{botonesCategorias}</Navegacion>
     </>
   );
 };

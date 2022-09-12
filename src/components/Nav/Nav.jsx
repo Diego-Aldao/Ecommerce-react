@@ -4,8 +4,8 @@ import styled from "styled-components";
 import { FiSearch, FiUser, FiShoppingBag } from "react-icons/fi";
 import NavMovil from "./NavMovil/NavMovil";
 import NavDesk from "./NavDesk/NavDesk";
-import useCategorias from "../../hooks/useCategorias";
 import useGeneros from "../../hooks/useGeneros";
+import { Link } from "wouter";
 
 const Nav = styled.nav`
   width: 100%;
@@ -16,6 +16,9 @@ const Nav = styled.nav`
   position: relative;
   @media (min-width: 768px) {
     height: 60px;
+  }
+  @media (min-width: 1024px) {
+    padding: 0px 32px;
   }
 `;
 const Hamburguesa = styled.div`
@@ -31,6 +34,9 @@ const Hamburguesa = styled.div`
     margin: 2px;
     background: white;
   }
+  @media (min-width: 1024px) {
+    display: none;
+  }
 `;
 const Logo = styled.p`
   height: 100%;
@@ -44,11 +50,19 @@ const Logo = styled.p`
 const BotonGenero = styled.button`
   height: 100%;
   line-height: 60px;
-  width: 115px;
   background: none;
+  width: 115px;
   color: white;
-  border: 1px solid #ffffff40;
+  border: none;
   display: none;
+  text-transform: uppercase;
+  font-weight: 700;
+  &.hombre {
+    background: ${({ genero }) => genero == "hombre" && "#796764"};
+  }
+  &.mujer {
+    background: ${({ genero }) => genero !== "hombre" && "#796764"};
+  }
   @media (min-width: 1024px) {
     display: block;
   }
@@ -100,26 +114,28 @@ const Icono = styled.button`
   }
 `;
 
-const Navegacion = () => {
-  const { navegacion } = useCategorias();
+const Navegacion = ({ genero }) => {
   const { contenidoHombre, contenidoMujer } = useGeneros();
   const [visible, setvisible] = useState(false);
 
-  const handleClick = (e) => {
-    console.log(e.target);
+  const handleClick = () => {
     setvisible(!visible);
   };
   return (
     <>
-      <Nav onClick={handleClick}>
-        <Hamburguesa>
+      <Nav>
+        <Hamburguesa onClick={handleClick}>
           <span></span>
           <span></span>
           <span></span>
         </Hamburguesa>
         <Logo>asos</Logo>
-        <BotonGenero>mujer</BotonGenero>
-        <BotonGenero>hombre</BotonGenero>
+        <BotonGenero className="mujer" genero={genero}>
+          <Link to="/mujer">mujer</Link>
+        </BotonGenero>
+        <BotonGenero className="hombre" genero={genero}>
+          <Link to="/hombre">hombre</Link>
+        </BotonGenero>
         <Buscador>
           <div>
             <input type="text" placeholder="buscar articulos y marcas" />
@@ -141,10 +157,12 @@ const Navegacion = () => {
       <NavMovil
         visible={visible}
         setvisible={setvisible}
-        navegacion={navegacion}
-        contenido={contenidoMujer}
+        contenido={genero == "hombre" ? contenidoHombre : contenidoMujer}
+        genero={genero}
       />
-      <NavDesk />
+      <NavDesk
+        contenido={genero == "hombre" ? contenidoHombre : contenidoMujer}
+      />
     </>
   );
 };

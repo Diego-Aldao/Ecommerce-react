@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import DetalleNavMovil from "./DetalleNavMovil";
 import ListaNavMovil from "./ListaNavMovil";
+import { useLocation } from "wouter";
 
 const Contenido = styled.div`
   width: 100%;
@@ -11,7 +12,10 @@ const Contenido = styled.div`
   top: 0;
   left: 0;
   background: #0000005a;
-  display: ${({ visible }) => (visible ? "flex" : "none")};
+  opacity: ${({ visible }) => (visible ? "1" : "0")};
+  z-index: ${({ visible }) => (visible ? "1" : "-10")};
+  transition: all 0.3s ease-in-out;
+  display: flex;
   @media (min-width: 1024px) {
     display: none;
   }
@@ -23,6 +27,7 @@ const Navegacion = styled.nav`
   position: relative;
   left: ${({ visible }) => (visible ? "0" : "-100%")};
   background: white;
+  transition: all 0.3s ease-in-out;
   overflow: hidden;
 `;
 
@@ -32,6 +37,7 @@ const ContenedorNav = styled.div`
   overflow-y: scroll;
   position: relative;
   left: ${({ posicion }) => (posicion ? "-100%" : "0px")};
+  transition: all 0.3s ease-in-out;
 `;
 
 const ContenidoSimple = styled.div`
@@ -71,6 +77,8 @@ const BotonCerrar = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-right: auto;
+  transition: all 0.5s ease-in-out;
   span {
     position: absolute;
     width: 30px;
@@ -90,11 +98,19 @@ const ContenidoDetallado = styled.div`
   position: relative;
 `;
 
-const NavMovil = ({ visible, setvisible, contenido }) => {
+const NavMovil = ({ visible, setvisible, contenido, genero }) => {
   const [categoria, setCategoria] = useState();
   const [posicion, setPosicion] = useState(false);
+  const [location, setLocation] = useLocation();
+
   const handleClick = () => {
     setvisible(!visible);
+  };
+
+  const handleClickGenero = (genero) => {
+    setvisible(!visible);
+    setLocation(genero);
+    window.location.reload();
   };
 
   return (
@@ -103,13 +119,27 @@ const NavMovil = ({ visible, setvisible, contenido }) => {
         <ContenedorNav posicion={posicion}>
           <ContenidoSimple>
             <ContenedorBotones>
-              <button>mujer</button>
-              <button>hombre</button>
+              <button
+                onClick={() => {
+                  handleClickGenero("mujer");
+                }}
+              >
+                mujer
+              </button>
+              <button
+                onClick={() => {
+                  handleClickGenero("hombre");
+                }}
+              >
+                hombre
+              </button>
             </ContenedorBotones>
             <ListaNavMovil
               contenido={contenido}
               setPosicion={setPosicion}
               setCategoria={setCategoria}
+              genero={genero}
+              setvisible={setvisible}
             />
           </ContenidoSimple>
           <ContenidoDetallado>
