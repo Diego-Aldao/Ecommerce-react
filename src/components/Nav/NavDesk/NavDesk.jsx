@@ -41,9 +41,8 @@ const NavDesk = ({ contenido }) => {
 
   const botonesCategorias = categorias.map((categoria) => {
     return (
-      <>
+      <React.Fragment key={categoria.id}>
         <button
-          key={categoria.id}
           onMouseOver={() => {
             handleMouseOver(categoria.children);
           }}
@@ -52,7 +51,7 @@ const NavDesk = ({ contenido }) => {
           {categoria.content.title}
         </button>
         <Dropdown hijos={hijos} visible={visible} setVisible={setVisible} />
-      </>
+      </React.Fragment>
     );
   });
 

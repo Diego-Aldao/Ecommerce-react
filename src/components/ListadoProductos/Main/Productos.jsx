@@ -63,7 +63,7 @@ const Productos = ({ productos }) => {
     <>
       {productos.map((producto) => {
         return (
-          <Producto>
+          <Producto key={producto.id}>
             <div>
               <img src={`https://${producto.imageUrl}`} alt="" />
             </div>
