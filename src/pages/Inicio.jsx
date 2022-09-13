@@ -1,20 +1,13 @@
 import React from "react";
-import CardInicio from "../components/CardInicio";
+import Nav from "../components/Nav/Nav";
+import Layout from "../layout/Layout";
 
-import styled from "styled-components";
-
-const Contenedor = styled.section`
-  width: 100%;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 15px;
-`;
-
-const Inicio = () => {
+const Inicio = ({ params }) => {
+  let genero = params.genero;
   return (
-    <Contenedor>
-      <CardInicio />
-    </Contenedor>
+    <Layout genero={genero}>
+      <p>algo</p>
+    </Layout>
   );
 };
 
