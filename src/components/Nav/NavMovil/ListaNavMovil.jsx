@@ -52,9 +52,8 @@ const ListaNavMovil = ({ contenido, setPosicion, setCategoria, genero }) => {
     setCategoria(categoria);
     setPosicion((prevValue) => !prevValue);
   };
-  const handleClickHome = () => {
-    window.location.reload();
-    setLocation(`/${genero == "hombre" ? "hombre" : "mujeres"}`);
+  const handleClickHome = (genero) => {
+    setLocation(`/${genero == "hombre" ? "hombre" : "mujer"}`);
   };
   const botonHome = contenido
     .filter((obj) => obj.content.title == "Home")
@@ -64,7 +63,9 @@ const ListaNavMovil = ({ contenido, setPosicion, setCategoria, genero }) => {
           className="btn-home"
           key={obj.children[0].id}
           background={obj.children[0].content.mobileImageUrl}
-          onClick={handleClickHome}
+          onClick={() => {
+            handleClickHome(genero);
+          }}
         >
           <Titulo>{obj.children[0].content.title}</Titulo>
         </Item>
