@@ -2,8 +2,8 @@ import React from "react";
 import { useState } from "react";
 import styled from "styled-components";
 import { FiSearch, FiUser, FiShoppingBag } from "react-icons/fi";
-import NavMovil from "./NavMovil/NavMovil";
-import NavDesk from "./NavDesk/NavDesk";
+import NavMovilPrincipal from "./NavMovil/NavMovilPrincipal";
+import NavDeskPrincipal from "./NavDesk/NavDeskPrincipal";
 import useGeneros from "../../hooks/useGeneros";
 import { Link } from "wouter";
 
@@ -154,13 +154,13 @@ const Navegacion = ({ genero }) => {
           <FiShoppingBag></FiShoppingBag>
         </Icono>
       </Nav>
-      <NavMovil
+      <NavMovilPrincipal
         visible={visible}
         setvisible={setvisible}
         contenido={genero == "hombre" ? contenidoHombre : contenidoMujer}
         genero={genero}
       />
-      <NavDesk
+      <NavDeskPrincipal
         contenido={genero == "hombre" ? contenidoHombre : contenidoMujer}
       />
     </>
