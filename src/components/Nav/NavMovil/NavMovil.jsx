@@ -13,7 +13,8 @@ const Contenido = styled.div`
   left: 0;
   background: #0000005a;
   opacity: ${({ visible }) => (visible ? "1" : "0")};
-  z-index: ${({ visible }) => (visible ? "1" : "-10")};
+  visibility: ${({ visible }) => (visible ? "visible" : "hidden")};
+  z-index: 1;
   transition: all 0.3s ease-in-out;
   display: flex;
   @media (min-width: 1024px) {
@@ -109,7 +110,7 @@ const NavMovil = ({ visible, setvisible, contenido, genero }) => {
 
   const handleClickGenero = (genero) => {
     setvisible(!visible);
-    setLocation(genero);
+    setLocation(`/${genero}`);
     window.location.reload();
   };
 
