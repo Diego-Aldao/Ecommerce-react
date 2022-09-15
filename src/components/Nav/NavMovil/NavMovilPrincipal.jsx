@@ -55,7 +55,7 @@ const NavMovilPrincipal = ({ visible, setvisible, contenido, genero }) => {
   };
 
   return (
-    <Contenido visible={visible} left={true}>
+    <Contenido visible={visible} left={true} media={"1024px"}>
       <Navegacion visible={visible} left={true}>
         <ContenedorNav posicion={posicion}>
           <ContenidoSimple>

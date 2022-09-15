@@ -11,6 +11,7 @@ const Contenido = styled.div`
   width: 100%;
   padding: 0px;
   height: ${({ visible }) => (visible ? "auto" : "0px")};
+  z-index: 9999;
 `;
 
 const ContenedorLista = styled.ul`

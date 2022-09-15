@@ -18,12 +18,23 @@ export const Titulo = styled.div`
   h3 {
     text-transform: uppercase;
     font-size: 16px;
+    display: flex;
+    align-items: flex-end;
   }
   svg {
-    width: 22px;
-    height: 22px;
+    min-width: 22px;
+    min-height: 22px;
     stroke-width: 0.2;
     margin-right: 10px;
+  }
+  .check {
+    margin-left: auto;
+    text-transform: uppercase;
+    display: flex;
+    align-items: flex-end;
+    svg {
+      margin: 0px 0px 0px 10px;
+    }
   }
 `;
 export const Lista = styled.ul`
@@ -48,6 +59,14 @@ export const Lista = styled.ul`
       height: 1px;
       background: #e0e0e0;
     }
+    .item-check {
+      margin-left: auto;
+    }
+  }
+  .seleccionado {
+    color: black;
+    font-weight: 600;
+    background: var(--gradiente2);
   }
 `;
 export const Footer = styled.div`

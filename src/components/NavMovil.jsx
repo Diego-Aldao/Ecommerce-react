@@ -13,7 +13,7 @@ export const Contenido = styled.div`
   z-index: 1;
   transition: all 0.3s ease-in-out;
   display: flex;
-  @media (min-width: 1024px) {
+  @media (min-width: ${({ media }) => media}) {
     display: none;
   }
 `;

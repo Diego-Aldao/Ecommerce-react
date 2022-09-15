@@ -14,6 +14,7 @@ const Nav = styled.nav`
   color: white;
   display: flex;
   position: relative;
+  z-index: 9999;
   @media (min-width: 768px) {
     height: 60px;
   }

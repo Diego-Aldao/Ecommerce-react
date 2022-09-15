@@ -8,6 +8,7 @@ const Contenedor = styled.main`
   max-width: 512px;
   margin: 0 auto;
   padding: 0px 12px;
+  background: white;
 
   @media (min-width: 768px) {
     max-width: 1366px;
@@ -33,6 +34,7 @@ const Grid = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 12px;
+  background: white;
   @media (min-width: 768px) {
     grid-template-columns: 1fr 1fr 1fr;
   }
@@ -84,7 +86,6 @@ const Footer = styled.div`
 
 const Main = ({ idCategoria }) => {
   const data = DataJson;
-  console.log(data);
   return (
     <Contenedor>
       <Info>{data.itemCount} estilos encontrados</Info>
