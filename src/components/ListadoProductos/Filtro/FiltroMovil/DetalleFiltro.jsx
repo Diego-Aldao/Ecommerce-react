@@ -4,6 +4,7 @@ import { Contenido, Titulo, Footer, Lista } from "./ListaFiltro";
 import { FiSearch } from "react-icons/fi";
 import { AiOutlineCheck, AiOutlineClose } from "react-icons/ai";
 import styled from "styled-components";
+import useFiltro from "../../../../hooks/useFiltro";
 
 const Header = styled.div`
   width: 100%;
@@ -41,26 +42,12 @@ const Buscador = styled.div`
 `;
 
 const DetalleFiltro = ({ filtro, setPosicion }) => {
-  const [seleccionado, setSeleccionado] = useState(null);
+  console.log(filtro);
+  const { handleCheck, handleCheckAll, handleDeleteAll, seleccionados } =
+    useFiltro();
+
   const handleClick = () => {
     setPosicion((prevValue) => !prevValue);
-  };
-
-  const handleCheck = (item) => {
-    item.isSelected = !item.isSelected;
-    setSeleccionado({ ...item });
-  };
-
-  const handleCheckAll = (items) => {
-    items.every((item) => item.isSelected == true)
-      ? items.map((item) => (item.isSelected = false))
-      : items.map((item) => (item.isSelected = true));
-    setSeleccionado({ ...items });
-  };
-
-  const handleDeleteAll = (items) => {
-    items.map((item) => (item.isSelected = false));
-    setSeleccionado(null);
   };
 
   const items = filtro
@@ -84,47 +71,49 @@ const DetalleFiltro = ({ filtro, setPosicion }) => {
       })
     : "";
   return (
-    <Contenido>
-      <Header>
-        <Titulo>
-          <h3>
-            <BsArrowLeft onClick={handleClick}></BsArrowLeft>
-            {filtro && filtro.nombre}
-          </h3>
-          {Object.keys(seleccionado).length >= 1 ? (
-            <span
-              className="check"
-              onClick={() => {
-                handleDeleteAll(filtro.valores);
-              }}
-            >
-              borrar <AiOutlineClose></AiOutlineClose>
-            </span>
-          ) : (
-            <span
-              className="check"
-              onClick={() => {
-                handleCheckAll(filtro.valores);
-              }}
-            >
-              todos <AiOutlineCheck></AiOutlineCheck>
-            </span>
-          )}
-        </Titulo>
-        <Buscador longitud={filtro && filtro.longitud}>
-          <div>
-            <input type="text" placeholder="buscar" />
-            <button>
-              <FiSearch></FiSearch>
-            </button>
-          </div>
-        </Buscador>
-      </Header>
-      <Lista>{items}</Lista>
-      <Footer>
-        <button>ver articulos</button>
-      </Footer>
-    </Contenido>
+    <>
+      <Contenido>
+        <Header>
+          <Titulo>
+            <h3>
+              <BsArrowLeft onClick={handleClick}></BsArrowLeft>
+              {filtro && filtro.nombre}
+            </h3>
+            {Object.keys(seleccionados).length >= 1 ? (
+              <span
+                className="check"
+                onClick={() => {
+                  handleDeleteAll(filtro.valores);
+                }}
+              >
+                borrar <AiOutlineClose></AiOutlineClose>
+              </span>
+            ) : (
+              <span
+                className="check"
+                onClick={() => {
+                  handleCheckAll(filtro.valores);
+                }}
+              >
+                todos <AiOutlineCheck></AiOutlineCheck>
+              </span>
+            )}
+          </Titulo>
+          <Buscador longitud={filtro && filtro.longitud}>
+            <div>
+              <input type="text" placeholder="buscar" />
+              <button>
+                <FiSearch></FiSearch>
+              </button>
+            </div>
+          </Buscador>
+        </Header>
+        <Lista>{items}</Lista>
+        <Footer>
+          <button>ver articulos</button>
+        </Footer>
+      </Contenido>
+    </>
   );
 };
 

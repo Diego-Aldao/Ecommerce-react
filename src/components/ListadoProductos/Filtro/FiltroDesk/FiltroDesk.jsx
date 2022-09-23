@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import { HiChevronDown } from "react-icons/hi";
+import { AiOutlineCheck, AiOutlineClose } from "react-icons/ai";
+import useFiltro from "../../../../hooks/useFiltro";
 
 const Contenedor = styled.div`
   width: 100%;
@@ -66,26 +68,44 @@ const Detalle = styled.div`
   .header {
     display: flex;
     width: 100%;
+    justify-content: space-between;
     padding: 10px;
     height: 60px;
+    overflow: hidden;
     .seleccionados,
     button {
       flex: 1 1 auto;
     }
+    .seleccionados {
+      overflow: hidden;
+      max-width: calc(100% - 110px);
+      white-space: nowrap;
+      position: relative;
+    }
+    .seleccionados:after {
+      content: "";
+      position: absolute;
+      width: 30%;
+      right: 0px;
+      top: 0px;
+      height: 100%;
+      background: linear-gradient(to right, #ffffff6d, #fff);
+    }
     span {
       background: none;
       padding: 0px 10px;
-      max-width: 87px;
+      max-width: 95px;
       border: 1px solid #ccc;
       text-transform: uppercase;
+      justify-content: space-between;
     }
-    p {
+    .item-seleccionados,
+    .cant-seleccionados {
       display: flex;
-      justify-content: flex-start;
-      align-items: center;
-      text-align: start;
-
       height: 50%;
+    }
+    .item-seleccionados p {
+      margin-right: 10px;
     }
   }
   ul {
@@ -99,24 +119,41 @@ const Detalle = styled.div`
       height: 44px;
       background: white;
       display: flex;
-      justify-content: flex-start;
+      justify-content: space-between;
       align-items: center;
       margin-bottom: 10px;
       border-radius: 5px;
       box-shadow: 1px 1px 5px #0000001a;
       padding: 10px;
       text-transform: capitalize;
+      .item-check {
+        margin-left: auto;
+        width: 15px;
+      }
+    }
+    .seleccionado {
+      color: black;
+      font-weight: 600;
+      background: var(--gradiente2);
     }
   }
 `;
 
 const FiltroDesk = ({ filtros }) => {
+  const { handleCheck, handleCheckAll, handleDeleteAll, seleccionados } =
+    useFiltro();
   const [claseActiva, setClaseActiva] = useState();
-  const [visible, setVisible] = useState(false);
+  const [total, setTotal] = useState([]);
+  const [nombres, setNombres] = useState([]);
 
-  const handleClick = (id) => {
-    console.log(id);
+  const handleClick = (id, filtro) => {
     setClaseActiva(id);
+    const checked = filtro.facetValues.filter(
+      (item) => item.isSelected === true
+    );
+    const nombresChecked = checked.map((item) => item.name);
+    setNombres(nombresChecked);
+    setTotal(checked);
   };
 
   const items = filtros.map((filtro) => {
@@ -124,7 +161,7 @@ const FiltroDesk = ({ filtros }) => {
       <Select
         key={filtro.id}
         onClick={() => {
-          handleClick(filtro.id);
+          handleClick(filtro.id, filtro);
         }}
         onMouseLeave={() => {
           setClaseActiva(null);
@@ -133,23 +170,57 @@ const FiltroDesk = ({ filtros }) => {
         <span>{filtro.name}</span>
         <HiChevronDown></HiChevronDown>
         <Detalle
-          visible={visible}
           className={`${
             filtro.id === claseActiva ? "visible" : "oculto"
           } detalle`}
         >
           <div className="header">
             <div className="seleccionados">
-              <p className="cant-seleccionados">0 seleccionados</p>
-              <p className="item-seleccionados">hoy</p>
+              <p className="cant-seleccionados">{total.length} seleccionados</p>
+              <div className="item-seleccionados">
+                {nombres.map((nombre) => {
+                  return <>{nombre}, </>;
+                })}
+              </div>
             </div>
-            <span>
-              <HiChevronDown></HiChevronDown> todo
-            </span>
+            {Object.keys(seleccionados).length >= 1 ? (
+              <span
+                className="check"
+                onClick={() => {
+                  handleDeleteAll(filtro.facetValues);
+                }}
+              >
+                borrar <AiOutlineClose></AiOutlineClose>
+              </span>
+            ) : (
+              <span
+                className="check"
+                onClick={() => {
+                  handleCheckAll(filtro.facetValues);
+                }}
+              >
+                todos <AiOutlineCheck></AiOutlineCheck>
+              </span>
+            )}
           </div>
           <ul>
             {filtro.facetValues.map((value) => {
-              return <li key={value.id}>{value.name}</li>;
+              return (
+                <li
+                  key={value.id}
+                  onClick={() => {
+                    handleCheck(value);
+                  }}
+                  className={value.isSelected ? "seleccionado" : ""}
+                >
+                  {value.name} ({value.count})
+                  {value.isSelected && (
+                    <span className="item-check">
+                      <AiOutlineCheck></AiOutlineCheck>
+                    </span>
+                  )}
+                </li>
+              );
             })}
           </ul>
         </Detalle>

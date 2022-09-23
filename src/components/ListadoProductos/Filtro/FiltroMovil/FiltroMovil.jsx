@@ -18,7 +18,7 @@ const FiltroMovil = ({ setVisible, visible, filtros }) => {
   };
 
   return (
-    <Contenido visible={visible} rigth={true}>
+    <Contenido visible={visible} rigth={true} media={"768px"}>
       <BotonCerrar onClick={handleClick}>
         <span></span>
         <span></span>
