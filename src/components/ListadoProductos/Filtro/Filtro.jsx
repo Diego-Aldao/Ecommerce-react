@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import { HiChevronDown } from "react-icons/hi";
 import FiltroMovil from "./FiltroMovil/FiltroMovil";
+import FiltroDesk from "./FiltroDesk/FiltroDesk";
 
 const Contenedor = styled.div`
   width: 100%;
@@ -64,6 +65,9 @@ const Contenedor = styled.div`
     text-indent: -99999px;
     text-transform: uppercase;
   }
+  @media (min-width: 768px) {
+    display: none;
+  }
 `;
 
 const Filtro = ({ filtros }) => {
@@ -88,6 +92,7 @@ const Filtro = ({ filtros }) => {
         </div>
         <button onClick={handleClick}>filtrar</button>
       </Contenedor>
+      <FiltroDesk filtros={filtros} />
       <FiltroMovil
         setVisible={setVisible}
         visible={visible}
