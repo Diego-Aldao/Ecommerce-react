@@ -1,8 +1,9 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { AiOutlineHeart } from "react-icons/ai";
 import styled from "styled-components";
 import { ImStarFull, ImStarEmpty, ImStarHalf } from "react-icons/im";
-import { useRef } from "react";
+import Detalles from "./Detalles";
+import useWindowSize from "../../hooks/useWindowSize";
 
 const Contenedor = styled.aside`
   width: 100%;
@@ -14,6 +15,9 @@ const Contenedor = styled.aside`
     font-size: 12px;
     display: flex;
     align-items: center;
+  }
+  @media (min-width: 720px) {
+    flex: 1 1 35%;
   }
 `;
 
@@ -102,46 +106,8 @@ const Compra = styled.div`
   }
 `;
 
-const DetalleProducto = styled.div`
-  width: 100%;
-  h2 {
-    color: #ccc;
-    text-transform: uppercase;
-    font-size: 14px;
-    letter-spacing: 1px;
-    margin: 20px 0px 10px;
-  }
-  p {
-    margin-bottom: 10px;
-    line-height: 1.5;
-    color: #696969;
-    font-weight: 400;
-    font-size: 16px;
-  }
-  ul {
-    list-style-type: disc;
-    padding-left: 20px;
-    margin-top: 10px;
-    li {
-      margin-bottom: 10px;
-    }
-  }
-`;
-
 const Info = ({ producto }) => {
-  let ref = useRef();
-  let ref2 = useRef();
-  let ref3 = useRef();
-  let ref4 = useRef();
-  console.log(producto);
-
-  useEffect(() => {
-    ref.current.innerHTML = producto.description;
-    ref2.current.innerHTML = producto.brand.description;
-    ref3.current.innerHTML = producto.info.sizeAndFit;
-    ref4.current.innerHTML = producto.info.aboutMe;
-  }, []);
-
+  const tamaño = useWindowSize();
   const tallas = producto.variants.map((variante) => {
     return (
       <React.Fragment key={variante.id}>
@@ -197,36 +163,7 @@ const Info = ({ producto }) => {
           <AiOutlineHeart></AiOutlineHeart>
         </span>
       </Compra>
-      <DetalleProducto>
-        <div className="col">
-          <h2>detalles del producto</h2>
-          <p className="descripcion" ref={ref}></p>
-        </div>
-        <div className="col">
-          <div className="referencia">
-            <h2>referencia</h2>
-            <p>{producto.productCode}</p>
-          </div>
-          <div className="marca">
-            <h2>marca</h2>
-            <p ref={ref2}></p>
-          </div>
-        </div>
-        <div className="col">
-          <div className="talla-corte">
-            <h2>talla y corte</h2>
-            <p ref={ref3}></p>
-          </div>
-          <div className="como-cuidarme">
-            <h2>como cuidarme</h2>
-            <p>{producto.info.careInfo}</p>
-          </div>
-          <div className="como-soy">
-            <h2>como soy</h2>
-            <p ref={ref4}></p>
-          </div>
-        </div>
-      </DetalleProducto>
+      {tamaño.width < 720 ? <Detalles producto={producto} /> : null}
     </Contenedor>
   );
 };
