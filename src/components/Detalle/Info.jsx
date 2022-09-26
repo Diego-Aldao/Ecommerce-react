@@ -2,6 +2,8 @@ import React from "react";
 import { AiOutlineHeart } from "react-icons/ai";
 import styled from "styled-components";
 import { ImStarFull, ImStarEmpty, ImStarHalf } from "react-icons/im";
+import { TbTruckDelivery, TbTruckReturn, TbBoxMultiple } from "react-icons/tb";
+
 import Detalles from "./Detalles";
 import useWindowSize from "../../hooks/useWindowSize";
 
@@ -18,6 +20,7 @@ const Contenedor = styled.aside`
   }
   @media (min-width: 720px) {
     flex: 1 1 35%;
+    padding-left: 20px;
   }
 `;
 
@@ -106,6 +109,43 @@ const Compra = styled.div`
   }
 `;
 
+const Envio = styled.div`
+  padding: 16px;
+  border: 1px solid #eee;
+  span {
+    text-transform: capitalize;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    line-height: 1.6;
+    svg {
+      margin-right: 10px;
+      font-size: 26px;
+      stroke-width: 1;
+    }
+  }
+  span:nth-child(3) {
+    margin-left: 36px;
+    display: block;
+    svg {
+      font-size: 14px;
+      top: 3px;
+      position: relative;
+      margin-left: 5px;
+      stroke-width: 1.5;
+    }
+  }
+`;
+const Restricciones = styled.div`
+  border: 1px solid #eee;
+  border-top: none;
+  width: 100%;
+  padding: 16px;
+  font-size: 11.5px;
+  text-transform: capitalize;
+`;
+
 const Info = ({ producto }) => {
   const tamaño = useWindowSize();
   const tallas = producto.variants.map((variante) => {
@@ -163,6 +203,19 @@ const Info = ({ producto }) => {
           <AiOutlineHeart></AiOutlineHeart>
         </span>
       </Compra>
+      <Envio>
+        <span>
+          <TbTruckDelivery></TbTruckDelivery> envio gratis
+        </span>
+        <span>
+          <TbTruckReturn></TbTruckReturn> devoluciones gratis
+        </span>
+        <span>
+          se aplican terminos y condiciones. mas informacion
+          <TbBoxMultiple></TbBoxMultiple>
+        </span>
+      </Envio>
+      <Restricciones>este producto tiene reestricciones de envio</Restricciones>
       {tamaño.width < 720 ? <Detalles producto={producto} /> : null}
     </Contenedor>
   );

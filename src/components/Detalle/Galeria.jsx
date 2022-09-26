@@ -11,9 +11,8 @@ const Media = styled.div`
   width: 100%;
   @media (min-width: 720px) {
     flex: 1 1 65%;
-    padding-right: 30px;
+    padding: 20px 30px 0px 10px;
     position: relative;
-    padding-top: 30px;
   }
 `;
 
