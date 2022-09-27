@@ -1,8 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import heroMovil from "../../assets/Images/topman_hp-hero_mobile.avif";
-import heroDesk from "../../assets/Images/topman_hp-hero_desktop.avif";
 import useWindowSize from "../../hooks/useWindowSize";
+import useContentHome from "../../hooks/useContentHome";
 
 const Contenedor = styled.div`
   width: 100%;
@@ -78,7 +77,7 @@ const Registro = styled.div`
 `;
 const Descuento = styled.div`
   background: var(--gradiente2);
-  padding: 20px 35px;
+  padding: 20px 35px 5px;
   margin: 20px 0px;
   h2 {
     font-weight: 900;
@@ -87,6 +86,12 @@ const Descuento = styled.div`
     text-align: center;
     text-transform: uppercase;
     line-height: 1.5;
+  }
+  p {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 12px;
+    line-height: 1.3;
   }
   @media (min-width: 768px) {
     h2 {
@@ -168,15 +173,16 @@ const GridHome = styled.section`
   }
 `;
 
-const FlexHome = styled.div`
+const Promocion = styled.div`
   display: grid;
   grid-template-columns: 1fr;
   width: 100%;
   grid-gap: 20px;
   .img-contenedor {
-    max-height: 630px;
+    width: 100%;
     overflow: hidden;
     img {
+      width: 100%;
       height: 100%;
     }
   }
@@ -195,26 +201,22 @@ const FlexHome = styled.div`
     text-transform: uppercase;
   }
   span {
-    height: 100px;
-    padding: 15px 45px 10px;
+    padding: 15px 0px 10px;
     border: 2px solid black;
     margin: 25px auto 0px;
     text-transform: uppercase;
     line-height: 2;
-    display: flex;
+    display: block;
     font-weight: 600;
-    align-items: center;
     text-align: center;
     letter-spacing: 1px;
     max-width: 250px;
   }
   @media (min-width: 768px) {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 500px));
     grid-template-rows: auto;
     grid-gap: 30px;
-    img {
-      height: 55vw;
-    }
+    justify-content: center;
   }
 `;
 
@@ -257,8 +259,12 @@ const GridMarcas = styled.div`
   }
 `;
 
-const Home = () => {
+const Home = ({ genero }) => {
   const size = useWindowSize();
+
+  const { gridHome, heroHome, promocionHome, descuentoHome, marcasHome } =
+    useContentHome({ genero });
+
   return (
     <Contenedor>
       <Registro>
@@ -271,7 +277,13 @@ const Home = () => {
       </Registro>
       <Contenido className={size.width < 992 && "no-padding"}>
         <Hero>
-          <img src={size.width < 768 ? heroMovil : heroDesk} alt="" />
+          <img
+            src={
+              size.width < 768 ? heroHome.imagenMovile : heroHome.imagenDesktop
+            }
+            alt=""
+          />
+
           <div className="hero-info">
             <div className="categoria">
               <span>topman</span>
@@ -284,58 +296,38 @@ const Home = () => {
       </Contenido>
       <Contenido>
         <GridHome>
-          <div>
-            <div className="img-contenedor">
-              <img src={heroMovil} alt="" />
-            </div>
-            <p className="titulo">confort de asos design</p>
-            <p className="descripcion"> ponle buena cara al frio</p>
-          </div>
-          <div>
-            <div className="img-contenedor">
-              <img src={heroMovil} alt="" />
-            </div>
-            <p className="titulo">confort de asos design</p>
-            <p className="descripcion"> ponle buena cara al frio</p>
-          </div>
-          <div>
-            <div className="img-contenedor">
-              <img src={heroMovil} alt="" />
-            </div>
-            <p className="titulo">confort de asos design</p>
-            <p className="descripcion"> ponle buena cara al frio</p>
-          </div>
-          <div>
-            <div className="img-contenedor">
-              <img src={heroMovil} alt="" />
-            </div>
-            <p className="titulo">confort de asos design</p>
-            <p className="descripcion"> ponle buena cara al frio</p>
-          </div>
+          {gridHome.map((item) => {
+            return (
+              <div key={item.id}>
+                <div className="img-contenedor">
+                  <img src={item.imagen} alt="" />
+                </div>
+                <p className="titulo">{item.titulo}</p>
+                <p className="descripcion">{item.subtitulo}</p>
+              </div>
+            );
+          })}
         </GridHome>
       </Contenido>
       <Descuento>
-        <h2>hasta un -50% en diseños comodos</h2>
+        <h2>{descuentoHome.descripcion}</h2>
+        <p>{descuentoHome.footer}</p>
       </Descuento>
       <Contenido>
-        <FlexHome>
-          <div>
-            <div className="img-contenedor">
-              <img src={heroMovil} alt="" />
-            </div>
-            <h2>estilosamente terrorifico</h2>
-            <p>llega el estilo gotico</p>
-            <span>comprar asos design</span>
-          </div>
-          <div>
-            <div className="img-contenedor">
-              <img src={heroMovil} alt="" />
-            </div>
-            <h2>estilosamente terrorifico</h2>
-            <p>llega el estilo gotico</p>
-            <span>comprar asos design</span>
-          </div>
-        </FlexHome>
+        <Promocion>
+          {promocionHome.map((item) => {
+            return (
+              <div key={item.id}>
+                <div className="img-contenedor">
+                  <img src={item.imagen} alt="" />
+                </div>
+                <h2>{item.titulo}</h2>
+                <p>{item.subtitulo}</p>
+                <span>{item.boton}</span>
+              </div>
+            );
+          })}
+        </Promocion>
       </Contenido>
       <Contenido>
         <Marcas>
@@ -343,24 +335,13 @@ const Home = () => {
             <h2>marcas que son tendencia</h2>
           </header>
           <GridMarcas>
-            <div>
-              <img src={heroMovil} alt="" />
-            </div>
-            <div>
-              <img src={heroMovil} alt="" />
-            </div>
-            <div>
-              <img src={heroMovil} alt="" />
-            </div>
-            <div>
-              <img src={heroMovil} alt="" />
-            </div>
-            <div>
-              <img src={heroMovil} alt="" />
-            </div>
-            <div>
-              <img src={heroMovil} alt="" />
-            </div>
+            {marcasHome.map((marca) => {
+              return (
+                <div key={marca.id}>
+                  <img src={marca.imagen} alt="" />
+                </div>
+              );
+            })}
           </GridMarcas>
         </Marcas>
       </Contenido>
