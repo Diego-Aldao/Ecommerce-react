@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { AiOutlineHeart } from "react-icons/ai";
+import { Link } from "wouter";
 
 const Producto = styled.div`
   position: relative;
@@ -64,29 +65,31 @@ const Productos = ({ productos }) => {
       {productos.map((producto) => {
         return (
           <Producto key={producto.id}>
-            <div>
-              <img src={`https://${producto.imageUrl}`} alt="" />
-            </div>
-            <Descripcion>
-              <h2>{producto.name}</h2>
-            </Descripcion>
-            <Precios>
-              {producto.price.previous.text.length > 1 ? (
-                <>
-                  <span className="valor-viejo">
-                    {producto.price.current.text}
-                  </span>
-                  <span className="valor-nuevo">
-                    {producto.price.previous.text}
-                  </span>
-                </>
-              ) : (
-                <span>{producto.price.current.text}</span>
-              )}
-            </Precios>
-            <Favorito>
-              <AiOutlineHeart></AiOutlineHeart>
-            </Favorito>
+            <Link to={`/${producto.url}`}>
+              <div>
+                <img src={`https://${producto.imageUrl}`} alt="" />
+              </div>
+              <Descripcion>
+                <h2>{producto.name}</h2>
+              </Descripcion>
+              <Precios>
+                {producto.price.previous.text.length > 1 ? (
+                  <>
+                    <span className="valor-viejo">
+                      {producto.price.current.text}
+                    </span>
+                    <span className="valor-nuevo">
+                      {producto.price.previous.text}
+                    </span>
+                  </>
+                ) : (
+                  <span>{producto.price.current.text}</span>
+                )}
+              </Precios>
+              <Favorito>
+                <AiOutlineHeart></AiOutlineHeart>
+              </Favorito>
+            </Link>
           </Producto>
         );
       })}
