@@ -89,8 +89,8 @@ const Compra = styled.div`
     justify-content: center;
     align-items: center;
     border: none;
-    background: #34a07c;
-    color: white;
+    background: var(--color-linear);
+    color: black;
     text-transform: uppercase;
     font-weight: 800;
     font-size: 14px;

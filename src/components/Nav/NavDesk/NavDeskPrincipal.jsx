@@ -7,16 +7,17 @@ const Navegacion = styled.nav`
   width: 100%;
   height: 50px;
   padding: 0px 32px;
-  background: #796764;
+  background: var(--gradiente-principal);
   position: relative;
   button {
     flex: 1 1 auto;
     padding: 10px;
     background: none;
     color: white;
+    color: black;
     border: none;
     text-transform: capitalize;
-    font-size: 12px;
+    font-size: 13px;
   }
   @media (min-width: 1024px) {
     display: flex;

@@ -66,7 +66,7 @@ export const Lista = styled.ul`
   .seleccionado {
     color: black;
     font-weight: 600;
-    background: var(--gradiente2);
+    background: var(--gradiente-principal);
   }
 `;
 export const Footer = styled.div`

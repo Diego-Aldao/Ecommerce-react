@@ -134,7 +134,7 @@ const Detalle = styled.div`
     .seleccionado {
       color: black;
       font-weight: 600;
-      background: var(--gradiente2);
+      background: var(--gradiente-principal);
     }
   }
 `;
