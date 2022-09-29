@@ -6,8 +6,8 @@ const useData = () => {
   const { productos, setProductos } = useContext(ProductsContext);
 
   useEffect(() => {
-    const productosLocales = jsonData.products;
-    setProductos(productosLocales);
+    const { products } = jsonData;
+    setProductos(products);
   }, [setProductos]);
 
   return { productos };

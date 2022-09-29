@@ -8,13 +8,11 @@ const useFiltro = () => {
     const updateSeleccionados = seleccionados.filter((obj) => {
       obj.id !== item.id;
     });
-    console.log(updateSeleccionados);
     /*ACA TENDRIA QUE SI ISSELECTED ES TRUE, PUSHEAR AL ARRAY DEL STATE SELECCIONADO,
     SINO BUSCAR SI YA ESTA DENTRO DEL ARRAY Y SACARLO*/
     item.isSelected
       ? setSeleccionados([...seleccionados, item])
       : setSeleccionados(updateSeleccionados);
-    console.log(seleccionados);
   };
 
   const handleCheckAll = (items) => {

@@ -42,7 +42,6 @@ const Buscador = styled.div`
 `;
 
 const DetalleFiltro = ({ filtro, setPosicion }) => {
-  console.log(filtro);
   const { handleCheck, handleCheckAll, handleDeleteAll, seleccionados } =
     useFiltro();
 
