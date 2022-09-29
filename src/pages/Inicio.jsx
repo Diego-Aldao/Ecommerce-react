@@ -1,12 +1,12 @@
 import React from "react";
-import Nav from "../components/Nav/Nav";
+import Home from "../components/Home/Home";
 import Layout from "../layout/Layout";
 
 const Inicio = ({ params }) => {
   let genero = params.genero;
   return (
     <Layout genero={genero}>
-      <p>algo</p>
+      <Home genero={genero} />
     </Layout>
   );
 };
