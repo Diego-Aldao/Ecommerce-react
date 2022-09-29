@@ -29,12 +29,13 @@ const Registro = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: red;
+  background: var(--gradiente-secundario);
   .subtitulo {
     text-align: center;
     text-transform: uppercase;
     font-size: 14px;
     font-weight: 500;
+    font-style: italic;
   }
   h2 {
     text-transform: uppercase;
@@ -43,6 +44,7 @@ const Registro = styled.div`
     text-align: center;
     line-height: 1.4;
     max-width: 350px;
+    text-shadow: 0px 1px 0px #000000;
   }
   button {
     width: 190px;
@@ -54,7 +56,34 @@ const Registro = styled.div`
     background: black;
     border: none;
     letter-spacing: 1px;
+    position: relative;
     font-size: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    span {
+      padding-top: 5px;
+      position: relative;
+      z-index: 22;
+    }
+    .animated {
+      position: absolute;
+      left: auto;
+      top: 30px;
+      visibility: hidden;
+      opacity: 0;
+      transition: all 0.2s ease;
+    }
+  }
+  button:hover {
+    background: white;
+    .animated {
+      visibility: visible;
+      opacity: 1;
+      color: black;
+      top: 30%;
+    }
   }
   .footer {
     font-size: 12px;
@@ -75,33 +104,8 @@ const Registro = styled.div`
     }
   }
 `;
-const Descuento = styled.div`
-  background: var(--gradiente2);
-  padding: 20px 35px 5px;
-  margin: 20px 0px;
-  h2 {
-    font-weight: 900;
-    font-style: italic;
-    font-size: 26px;
-    text-align: center;
-    text-transform: uppercase;
-    line-height: 1.5;
-  }
-  p {
-    text-align: center;
-    margin-top: 20px;
-    font-size: 12px;
-    line-height: 1.3;
-  }
-  @media (min-width: 768px) {
-    h2 {
-      font-size: 32px;
-    }
-  }
-`;
 
 const Hero = styled.div`
-  background: red;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -122,16 +126,46 @@ const Hero = styled.div`
   .categoria,
   .btn {
     padding: 10px;
-    background: white;
-    color: black;
+    background: black;
+    color: white;
     font-size: 32px;
     text-transform: uppercase;
     font-weight: 700;
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.2s ease-in-out;
+    span {
+      position: relative;
+      z-index: 22;
+    }
+    .animated {
+      position: absolute;
+      left: auto;
+      top: 40px;
+      visibility: hidden;
+      opacity: 0;
+      transition: all 0.2s ease;
+    }
   }
   .btn {
     margin-top: 20px;
     font-size: 18px;
+    span {
+      padding-top: 5px;
+    }
+  }
+  .categoria:hover,
+  .btn:hover {
+    background: white;
+    .animated {
+      visibility: visible;
+      opacity: 1;
+      color: black;
+      top: 23%;
+    }
   }
   @media (min-width: 992px) {
     .categoria {
@@ -173,6 +207,32 @@ const GridHome = styled.section`
   }
 `;
 
+const Descuento = styled.div`
+  background: var(--color-promo);
+  padding: 20px 35px 5px;
+  margin: 20px 0px;
+  h2 {
+    font-weight: 900;
+    font-style: italic;
+    font-size: 26px;
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 1.5;
+    text-shadow: 0px 1px 0px #000000;
+  }
+  p {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 12px;
+    line-height: 1.3;
+  }
+  @media (min-width: 768px) {
+    h2 {
+      font-size: 32px;
+    }
+  }
+`;
+
 const Promocion = styled.div`
   display: grid;
   grid-template-columns: 1fr;
@@ -211,6 +271,11 @@ const Promocion = styled.div`
     text-align: center;
     letter-spacing: 1px;
     max-width: 250px;
+    transition: all 0.2s ease-in-out;
+  }
+  span:hover {
+    background: black;
+    color: white;
   }
   @media (min-width: 768px) {
     grid-template-columns: repeat(auto-fill, minmax(400px, 500px));
@@ -267,33 +332,80 @@ const Home = ({ genero }) => {
 
   return (
     <Contenedor>
-      <Registro>
-        <p className="subtitulo">asos premier party</p>
-        <h2>hazte miembro por el -25% en todo mañana!</h2>
-        <button>registrarme</button>
-        <p className="footer">
-          Se aplican terminos y condiciones. Solo por tiempo limitado
-        </p>
-      </Registro>
-      <Contenido className={size.width < 992 && "no-padding"}>
-        <Hero>
-          <img
-            src={
-              size.width < 768 ? heroHome.imagenMovile : heroHome.imagenDesktop
-            }
-            alt=""
-          />
+      {size.width < 768 ? (
+        <>
+          <Registro>
+            <p className="subtitulo">asos premier party</p>
+            <h2>hazte miembro por el -25% en todo mañana!</h2>
+            <button>
+              <span>registrarme</span>
+              <span className="animated">registrarme</span>
+            </button>
+            <p className="footer">
+              Se aplican terminos y condiciones. Solo por tiempo limitado
+            </p>
+          </Registro>
+          <Contenido className="no-padding">
+            <Hero>
+              <img
+                src={
+                  size.width < 768
+                    ? heroHome.imagenMovile
+                    : heroHome.imagenDesktop
+                }
+                alt=""
+              />
 
-          <div className="hero-info">
-            <div className="categoria">
-              <span>topman</span>
-            </div>
-            <div className="btn">
-              <span>comprar ahora</span>
-            </div>
-          </div>
-        </Hero>
-      </Contenido>
+              <div className="hero-info">
+                <div className="categoria">
+                  <span>topman</span>
+                  <span className="animated">topman</span>
+                </div>
+                <div className="btn">
+                  <span>comprar ahora</span>
+                </div>
+              </div>
+            </Hero>
+          </Contenido>
+        </>
+      ) : (
+        <>
+          <Contenido className="no-padding">
+            <Hero>
+              <img
+                src={
+                  size.width < 768
+                    ? heroHome.imagenMovile
+                    : heroHome.imagenDesktop
+                }
+                alt=""
+              />
+
+              <div className="hero-info">
+                <div className="categoria">
+                  <span>topman</span>
+                  <span className="animated">topman</span>
+                </div>
+                <div className="btn">
+                  <span>comprar ahora</span>
+                  <span className="animated">comprar ahora</span>
+                </div>
+              </div>
+            </Hero>
+          </Contenido>
+          <Registro>
+            <p className="subtitulo">asos premier party</p>
+            <h2>hazte miembro por el -25% en todo mañana!</h2>
+            <button>
+              <span>registrarme</span>
+              <span className="animated">registrarme</span>
+            </button>
+            <p className="footer">
+              Se aplican terminos y condiciones. Solo por tiempo limitado
+            </p>
+          </Registro>
+        </>
+      )}
       <Contenido>
         <GridHome>
           {gridHome.map((item) => {
