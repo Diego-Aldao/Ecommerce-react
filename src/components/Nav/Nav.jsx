@@ -53,16 +53,19 @@ const BotonGenero = styled.button`
   line-height: 60px;
   background: none;
   width: 115px;
-  color: white;
   border: none;
   display: none;
   text-transform: uppercase;
   font-weight: 700;
   &.hombre {
-    background: ${({ genero }) => genero == "hombre" && "#796764"};
+    background: ${({ genero }) =>
+      genero == "hombre" && "var(--color-secundario)"};
+    color: ${({ genero }) => (genero == "hombre" ? "black" : "white")};
   }
   &.mujer {
-    background: ${({ genero }) => genero !== "hombre" && "#796764"};
+    background: ${({ genero }) =>
+      genero !== "hombre" && "var(--color-secundario)"};
+    color: ${({ genero }) => (genero == "hombre" ? "white" : "black")};
   }
   @media (min-width: 1024px) {
     display: block;
