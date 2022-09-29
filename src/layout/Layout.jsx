@@ -1,4 +1,5 @@
 import React from "react";
+import Footer from "../components/Footer/Footer";
 import Navegacion from "../components/Nav/Nav";
 
 const Layout = ({ children, genero }) => {
@@ -6,6 +7,7 @@ const Layout = ({ children, genero }) => {
     <>
       <Navegacion genero={genero} />
       {children}
+      <Footer />
     </>
   );
 };
