@@ -19,7 +19,7 @@ const Contenedor = styled.section`
 `;
 
 const Banner = ({ categoria }) => {
-  const nombreCategoria = categoria.replace("-", " ");
+  const nombreCategoria = categoria.replaceAll("-", " ");
   return (
     <Contenedor>
       <h1>{nombreCategoria}</h1>
