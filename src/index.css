@@ -1,4 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;700&display=swap');
+@import "../node_modules/react-image-gallery/styles/css/image-gallery.css";
+
+:root {
+  --color-principal: #fed5db;
+  --color-secundario: #ffdfc0;
+  --color-promo: #aef6f7;
+  --color-promo2: #e690bd;
+  --gradiente-principal: linear-gradient(to left, var(--color-principal), var(--color-secundario));
+  --gradiente-secundario: linear-gradient(to left, var(--color-promo), var(--color-promo2))
+}
 
 * {
   padding: 0;
