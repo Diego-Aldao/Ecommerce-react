@@ -10,7 +10,7 @@ export const Contenido = styled.div`
   background: #0000005a;
   opacity: ${({ visible }) => (visible ? "1" : "0")};
   visibility: ${({ visible }) => (visible ? "visible" : "hidden")};
-  z-index: 1;
+  z-index: 9999;
   transition: all 0.3s ease-in-out;
   display: flex;
   @media (min-width: ${({ media }) => media}) {
