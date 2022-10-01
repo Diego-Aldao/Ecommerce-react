@@ -1,7 +1,12 @@
-import React from "react";
+import React, { useContext, useState } from "react";
 import styled from "styled-components";
 import useWindowSize from "../../hooks/useWindowSize";
 import useContentHome from "../../hooks/useContentHome";
+import LinksContext from "../../context/LinksContext";
+import useDestino from "../../hooks/useDestino";
+import { Link } from "wouter";
+import { useSpring, animated } from "react-spring";
+import { useEffect } from "react";
 
 const Contenedor = styled.div`
   width: 100%;
@@ -105,13 +110,14 @@ const Registro = styled.div`
   }
 `;
 
-const Hero = styled.div`
+const Hero = animated(styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   margin: 20px 0px;
   position: relative;
+  cursor: pointer;
   .hero-info {
     position: absolute;
     width: 100%;
@@ -157,7 +163,6 @@ const Hero = styled.div`
       padding-top: 5px;
     }
   }
-  .categoria:hover,
   .btn:hover {
     background: white;
     .animated {
@@ -167,13 +172,24 @@ const Hero = styled.div`
       top: 23%;
     }
   }
+  &:hover {
+    .categoria {
+      background: white;
+      .animated {
+        visibility: visible;
+        opacity: 1;
+        color: black;
+        top: 23%;
+      }
+    }
+  }
   @media (min-width: 992px) {
     .categoria {
       padding-top: 20px;
       font-size: 62px;
     }
   }
-`;
+`);
 
 const GridHome = styled.section`
   display: grid;
@@ -325,10 +341,20 @@ const GridMarcas = styled.div`
 `;
 
 const Home = ({ genero }) => {
+  const { links } = useContext(LinksContext);
+
+  const { linkFormateado } = useDestino(links);
+
   const size = useWindowSize();
 
   const { gridHome, heroHome, promocionHome, descuentoHome, marcasHome } =
     useContentHome({ genero });
+
+  const [fadeIn, set] = useSpring(() => ({ opacity: 0, y: 50 }));
+
+  useEffect(() => {
+    set({ opacity: 1, y: 0, from: { opacity: 0, y: 50 } });
+  }, [gridHome]);
 
   return (
     <Contenedor>
@@ -358,8 +384,10 @@ const Home = ({ genero }) => {
 
               <div className="hero-info">
                 <div className="categoria">
-                  <span>topman</span>
-                  <span className="animated">topman</span>
+                  <span>{genero == "hombre" ? "topman" : "topshop"}</span>
+                  <span className="animated">
+                    <span>{genero == "hombre" ? "topman" : "topshop"}</span>
+                  </span>
                 </div>
                 <div className="btn">
                   <span>comprar ahora</span>
@@ -371,27 +399,33 @@ const Home = ({ genero }) => {
       ) : (
         <>
           <Contenido className="no-padding">
-            <Hero>
-              <img
-                src={
-                  size.width < 768
-                    ? heroHome.imagenMovile
-                    : heroHome.imagenDesktop
-                }
-                alt=""
-              />
+            <Link to={linkFormateado}>
+              <Hero style={fadeIn}>
+                <img
+                  src={
+                    size.width < 768
+                      ? heroHome.imagenMovile
+                      : heroHome.imagenDesktop
+                  }
+                  alt=""
+                />
 
-              <div className="hero-info">
-                <div className="categoria">
-                  <span>topman</span>
-                  <span className="animated">topman</span>
+                <div className="hero-info">
+                  <div className="categoria">
+                    <span>
+                      <span>{genero == "hombre" ? "topman" : "topshop"}</span>
+                    </span>
+                    <span className="animated">
+                      <span>{genero == "hombre" ? "topman" : "topshop"}</span>
+                    </span>
+                  </div>
+                  <div className="btn">
+                    <span>comprar ahora</span>
+                    <span className="animated">comprar ahora</span>
+                  </div>
                 </div>
-                <div className="btn">
-                  <span>comprar ahora</span>
-                  <span className="animated">comprar ahora</span>
-                </div>
-              </div>
-            </Hero>
+              </Hero>
+            </Link>
           </Contenido>
           <Registro>
             <p className="subtitulo">asos premier party</p>
