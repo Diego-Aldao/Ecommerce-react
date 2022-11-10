@@ -6,6 +6,7 @@ import { ProductsContextProvider } from "./context/ProductsContext";
 import Search from "./pages/Search";
 import ListadoProductos from "./pages/ListadoProductos";
 import DetalleProducto from "./pages/DetalleProducto";
+import PanelUsuario from "./pages/PanelUsuario";
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
           path="/:categoria/:nombre/prd/:querys"
         />
       </Switch>
+      <Route component={PanelUsuario} path="/usuario/panelUsuario" />
     </ProductsContextProvider>
   );
 }
