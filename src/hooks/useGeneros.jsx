@@ -1,15 +1,27 @@
-import JsonData from "../data/categoriasEsp.json";
+import { useEffect } from "react";
+import { useState } from "react";
 
-const useGeneros = () => {
-  const { navigation } = JsonData;
+const useGeneros = ({ navegacion, genero }) => {
+  const [contenidoGenero, setContenidoGenero] = useState([]);
 
-  const contenidoHombre = navigation[0].children.filter(
-    (obj) => obj.content.title == "Home" || obj.content.title == "Categories"
-  );
-  const contenidoMujer = navigation[1].children.filter(
-    (obj) => obj.content.title == "Home" || obj.content.title == "Categories"
-  );
-  return { contenidoHombre, contenidoMujer };
+  useEffect(() => {
+    if (navegacion.length >= 1) {
+      const contenido =
+        genero == "hombre"
+          ? navegacion[0].children.filter(
+              (obj) =>
+                obj.content.title == "Home" || obj.content.title == "Categories"
+            )
+          : navegacion[1].children.filter(
+              (obj) =>
+                obj.content.title == "Home" || obj.content.title == "Categories"
+            );
+
+      setContenidoGenero(contenido);
+    }
+  }, [genero, navegacion]);
+
+  return { contenidoGenero };
 };
 
 export default useGeneros;
