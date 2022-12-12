@@ -56,50 +56,56 @@ const ListaNavMovil = ({ contenido, setPosicion, setCategoria, genero }) => {
     setLocation(`/${genero == "hombre" ? "hombre" : "mujer"}`);
   };
   const botonHome = contenido
-    .filter((obj) => obj.content.title == "Home")
-    .map((obj) => {
-      return (
-        <Item
-          className="btn-home"
-          key={obj.children[0].id}
-          background={obj.children[0].content.mobileImageUrl}
-          onClick={() => {
-            handleClickHome(genero);
-          }}
-        >
-          <Titulo>{obj.children[0].content.title}</Titulo>
-        </Item>
-      );
-    });
-
-  const botonesCategorias = contenido
-    .filter((obj) => obj.content.title == "Categories")
-    .map((obj) => {
-      return obj.children
-        .filter((obj) => obj.channelExclusions.length !== 2)
-        .map((child) => {
+    ? contenido
+        .filter((obj) => obj.content.title == "Home")
+        .map((obj) => {
           return (
             <Item
-              key={child.id}
+              className="btn-home"
+              key={obj.children[0].id}
+              background={obj.children[0].content.mobileImageUrl}
               onClick={() => {
-                handleClick(child);
+                handleClickHome(genero);
               }}
-              background={child.content.mobileImageUrl}
             >
-              {child.content.subTitle ? (
-                <>
-                  <Titulo className="especial">{child.content.title}</Titulo>
-                  <Titulo className="subtitulo">
-                    {child.content.subTitle}
-                  </Titulo>
-                </>
-              ) : (
-                <Titulo>{child.content.title}</Titulo>
-              )}
+              <Titulo>{obj.children[0].content.title}</Titulo>
             </Item>
           );
-        });
-    });
+        })
+    : null;
+
+  const botonesCategorias = contenido
+    ? contenido
+        .filter((obj) => obj.content.title == "Categories")
+        .map((obj) => {
+          return obj.children
+            .filter((obj) => obj.channelExclusions.length !== 2)
+            .map((child) => {
+              return (
+                <Item
+                  key={child.id}
+                  onClick={() => {
+                    handleClick(child);
+                  }}
+                  background={child.content.mobileImageUrl}
+                >
+                  {child.content.subTitle ? (
+                    <>
+                      <Titulo className="especial">
+                        {child.content.title}
+                      </Titulo>
+                      <Titulo className="subtitulo">
+                        {child.content.subTitle}
+                      </Titulo>
+                    </>
+                  ) : (
+                    <Titulo>{child.content.title}</Titulo>
+                  )}
+                </Item>
+              );
+            });
+        })
+    : null;
 
   return (
     <Contenido>
