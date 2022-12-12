@@ -1,7 +1,7 @@
-import React from "react";
-import DataJson from "../../../data/VestidosSkater.json";
+import React, { useState } from "react";
 import styled from "styled-components";
 import Productos from "./Productos";
+import { useEffect } from "react";
 
 const Contenedor = styled.main`
   width: 100%;
@@ -84,13 +84,18 @@ const Footer = styled.div`
   }
 `;
 
-const Main = ({ idCategoria }) => {
-  const data = DataJson;
+const Main = ({ productos, cantidad, categoria }) => {
+  const [currentData, setCurrentData] = useState(productos);
+
+  useEffect(() => {
+    setCurrentData(productos);
+  }, [categoria]);
+
   return (
     <Contenedor>
-      <Info>{data.itemCount} estilos encontrados</Info>
+      <Info>{cantidad} estilos encontrados</Info>
       <Grid>
-        <Productos productos={data.products}></Productos>
+        <Productos productos={currentData}></Productos>
       </Grid>
       <Footer>
         <p>Has visto 71 de 400 productos</p>
