@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import ItemFiltro from "./ItemFiltro";
 
 export const Contenido = styled.div`
   width: 100%;
@@ -90,35 +91,23 @@ export const Footer = styled.div`
   }
 `;
 
-const ListaFiltro = ({ filtros, setFiltro, setPosicion }) => {
-  const handleClick = (values, name) => {
-    const objetoFiltro = {
-      valores: values,
-      nombre: name,
-      longitud: values.length,
-    };
-    setFiltro(objetoFiltro);
-    setPosicion((prevValue) => !prevValue);
-  };
-
-  const items = filtros.map((filtro) => {
-    return (
-      <li
-        key={filtro.id}
-        onClick={() => {
-          handleClick(filtro.facetValues, filtro.name);
-        }}
-      >
-        <span>{filtro.name}</span>
-      </li>
-    );
-  });
+const ListaFiltro = ({ filtros, setPosicion, setFiltro }) => {
   return (
     <Contenido>
       <Titulo>
         <h3>filtrar</h3>
       </Titulo>
-      <Lista>{items}</Lista>
+      <Lista>
+        {filtros.map((filtro) => {
+          return (
+            <ItemFiltro
+              info={filtro}
+              setPosicion={setPosicion}
+              setFiltro={setFiltro}
+            />
+          );
+        })}
+      </Lista>
       <Footer>
         <button>ver articulos</button>
       </Footer>
