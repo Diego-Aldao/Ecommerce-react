@@ -49,9 +49,7 @@ const NavMovilPrincipal = ({ visible, setvisible, contenido, genero }) => {
   };
 
   const handleClickGenero = (genero) => {
-    setvisible(!visible);
     setLocation(`/${genero}`);
-    window.location.reload();
   };
 
   return (
