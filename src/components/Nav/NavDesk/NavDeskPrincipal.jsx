@@ -26,16 +26,20 @@ const Navegacion = styled.nav`
   }
 `;
 
-const NavDeskPrincipal = ({ contenido }) => {
+const NavDeskPrincipal = ({ contenido, genero }) => {
   const [visible, setVisible] = useState(false);
   const [hijos, setHijos] = useState();
   const [currentCategorias, setCurrentCategorias] = useState();
 
   useEffect(() => {
-    const categorias = contenido[1].children.filter(
-      (obj) => obj.channelExclusions.length !== 1
-    );
-    setCurrentCategorias(categorias);
+    if (contenido.length >= 1) {
+      const categorias = contenido
+        ? contenido[1].children.filter(
+            (obj) => obj.channelExclusions.length !== 1
+          )
+        : null;
+      setCurrentCategorias(categorias);
+    }
   }, [contenido]);
 
   let filter = {
@@ -54,23 +58,25 @@ const NavDeskPrincipal = ({ contenido }) => {
     setVisible(false);
   };
 
-  const botonesCategorias = currentCategorias
-    ? currentCategorias.map((categoria) => {
-        return (
-          <React.Fragment key={categoria.id}>
-            <button
-              onMouseOver={() => {
-                handleMouseOver(categoria.children);
-              }}
-              onMouseLeave={handleMouseLeave}
-            >
-              {categoria.content.title}
-            </button>
-            <Dropdown hijos={hijos} visible={visible} setVisible={setVisible} />
-          </React.Fragment>
-        );
-      })
-    : null;
+  const botonesCategorias = currentCategorias ? (
+    currentCategorias.map((categoria) => {
+      return (
+        <React.Fragment key={categoria.id}>
+          <button
+            onMouseOver={() => {
+              handleMouseOver(categoria.children);
+            }}
+            onMouseLeave={handleMouseLeave}
+          >
+            {categoria.content.title}
+          </button>
+          <Dropdown hijos={hijos} visible={visible} setVisible={setVisible} />
+        </React.Fragment>
+      );
+    })
+  ) : (
+    <></>
+  );
 
   return (
     <>
