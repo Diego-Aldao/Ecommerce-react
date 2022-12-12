@@ -1,0 +1,2455 @@
+{
+  "searchTerm": "",
+  "categoryName": "Vestidos skater",
+  "itemCount": 845,
+  "redirectUrl": "",
+  "products": [
+    {
+      "id": 203233001,
+      "name": "Vestido corto con estampado variado y detalle de volantes de chifón de Miss Selfridge Petite",
+      "price": {
+        "current": {
+          "value": 58.99,
+          "text": "58,99 €"
+        },
+        "previous": {
+          "value": null,
+          "text": ""
+        },
+        "rrp": {
+          "value": null,
+          "text": ""
+        },
+        "isMarkedDown": false,
+        "isOutletPrice": false,
+        "currency": "EUR"
+      },
+      "colour": "Multicolor",
+      "colourWayId": 203233003,
+      "brandName": "Miss Selfridge Petite",
+      "hasVariantColours": false,
+      "hasMultiplePrices": false,
+      "groupId": null,
+      "productCode": 120373350,
+      "productType": "Product",
+      "url": "miss-selfridge-petite/vestido-corto-con-estampado-variado-y-detalle-de-volantes-de-chifon-de-miss-selfridge-petite/prd/203233001?clr=multicolor&colourWayId=203233003",
+      "imageUrl": "images.asos-media.com/products/vestido-corto-con-estampado-variado-y-detalle-de-volantes-de-chifon-de-miss-selfridge-petite/203233001-1-multi",
+      "videoUrl": null,
+      "isSellingFast": false,
+      "sponsoredCampaignId": null
+    },
+    {
+      "id": 203115690,
+      "name": "Vestido corto rosa de corte skater estructurado con estampado de rosas de jacquard de ASOS DESIGN",
+      "price": {
+        "current": {
+          "value": 65.99,
+          "text": "65,99 €"
+        },
+        "previous": {
+          "value": null,
+          "text": ""
+        },
+        "rrp": {
+          "value": null,
+          "text": ""
+        },
+        "isMarkedDown": false,
+        "isOutletPrice": false,
+        "currency": "EUR"
+      },
+      "colour": "Estampado de rosas rosas",
+      "colourWayId": 203115691,
+      "brandName": "ASOS DESIGN",
+      "hasVariantColours": false,
+      "hasMultiplePrices": false,
+      "groupId": null,
+      "productCode": 119659950,
+      "productType": "Product",
+      "url": "asos-design/vestido-corto-rosa-de-corte-skater-estructurado-con-estampado-de-rosas-de-jacquard-de-asos-design/prd/203115690?clr=estampado-de-rosas-rosas&colourWayId=203115691",
+      "imageUrl": "images.asos-media.com/products/vestido-corto-rosa-de-corte-skater-estructurado-con-estampado-de-rosas-de-jacquard-de-asos-design/203115690-1-pinkroseprint",
+      "videoUrl": "video.asos-media.com/products/vestido-corto-rosa-de-corte-skater-estructurado-con-estampado-de-rosas-de-jacquard-de-asos-design/203115690-catwalk-AVS",
+      "isSellingFast": false,
+      "sponsoredCampaignId": null
+    },
+    {
+      "id": 203708565,
+      "name": "Vestido corto negro de manga larga con escote corazón de New Look",
+      "price": {
+        "current": {
+          "value": 40.99,
+          "text": "40,99 €"
+        },
+        "previous": {
+          "value": null,
+          "text": ""
+        },
+        "rrp": {
+          "value": null,
+          "text": ""
+        },
+        "isMarkedDown": false,
+        "isOutletPrice": false,
+        "currency": "EUR"
+      },
+      "colour": "Negro",
+      "colourWayId": 203708567,
+      "brandName": "New Look",
+      "hasVariantColours": false,
+      "hasMultiplePrices": false,
+      "groupId": null,
+      "productCode": 122670487,
+      "productType": "Product",
+      "url": "new-look/vestido-corto-negro-de-manga-larga-con-escote-corazon-de-new-look/prd/203708565?clr=negro&colourWayId=203708567",
+      "imageUrl": "images.asos-media.com/products/vestido-corto-negro-de-manga-larga-con-escote-corazon-de-new-look/203708565-1-black",
+      "videoUrl": "video.asos-media.com/products/vestido-corto-negro-de-manga-larga-con-escote-corazon-de-new-look/203708565-catwalk-AVS",
+      "isSellingFast": false,
+      "sponsoredCampaignId": null
+    },
+    {
+      "id": 202822686,
+      "name": "Vestido corto con cuello alto retorcido, bajo asimétrico y estampado floral pixelado de ASOS DESIGN",
+      "price": {
+        "current": {
+          "value": 44.99,
+          "text": "44,99 €"
+        },
+        "previous": {
+          "value": null,
+          "text": ""
+        },
+        "rrp": {
+          "value": null,
+          "text": ""
+        },
+        "isMarkedDown": false,
+        "isOutletPrice": false,
+        "currency": "EUR"
+      },
+      "colour": "Flores pixeladas",
+      "colourWayId": 202822687,
+      "brandName": "ASOS DESIGN",
+      "hasVariantColours": false,
+      "hasMultiplePrices": false,
+      "groupId": null,
+      "productCode": 118778734,
+      "productType": "Product",
+      "url": "asos-design/vestido-corto-con-cuello-alto-retorcido-bajo-asimetrico-y-estampado-floral-pixelado-de-asos-design/prd/202822686?clr=flores-pixeladas&colourWayId=202822687",
+      "imageUrl": "images.asos-media.com/products/vestido-corto-con-cuello-alto-retorcido-bajo-asimetrico-y-estampado-floral-pixelado-de-asos-design/202822686-1-pixilatedfloral",
+      "videoUrl": "video.asos-media.com/products/vestido-corto-con-cuello-alto-retorcido-bajo-asimetrico-y-estampado-floral-pixelado-de-asos-design/202822686-catwalk-AVS",
+      "isSellingFast": false,
+      "sponsoredCampaignId": null
+    },
+    {
+      "id": 201716044,
+      "name": "Vestido playero corto verde con mangas fluidas de ASOS DESIGN Tall",
+      "price": {
+        "current": {
+          "value": 31.99,
+          "text": "31,99 €"
+        },
+        "previous": {
+          "value": null,
+          "text": ""
+        },
+        "rrp": {
+          "value": null,
+          "text": ""
+        },
+        "isMarkedDown": false,
+        "isOutletPrice": false,
+        "currency": "EUR"
+      },
+      "colour": "Emerald green",
+      "colourWayId": 201716045,
+      "brandName": "ASOS Tall",
+      "hasVariantColours": false,
+      "hasMultiplePrices": false,
+      "groupId": null,
+      "productCode": 114664977,
+      "productType": "Product",
+      "url": "asos-tall/vestido-playero-corto-verde-con-mangas-fluidas-de-asos-design-tall/prd/201716044?clr=emerald-green&colourWayId=201716045",
+      "imageUrl": "images.asos-media.com/products/vestido-playero-corto-verde-con-mangas-fluidas-de-asos-design-tall/201716044-1-emeraldgreen",
+      "videoUrl": null,
+      "isSellingFast": false,
+      "sponsoredCampaignId": null
+    },
+    {
+      "id": 202931617,
+      "name": "Vestido corto negro de corte skater de punto de Only",
+      "price": {
+        "current": {
+          "value": 37.99,
+          "text": "37,99 €"
+        },
+        "previous": {
+          "value": null,
+          "text": ""
+        },
+        "rrp": {
+          "value": null,
+          "text": ""
+        },
+        "isMarkedDown": false,
+        "isOutletPrice": false,
+        "currency": "EUR"
+      },
+      "colour": "Negro",
+      "colourWayId": 202931620,
+      "brandName": "Only",
+      "hasVariantColours": false,
+      "hasMultiplePrices": false,
+      "groupId": null,
+      "productCode": 118973956,
+      "productType": "Product",
+      "url": "only/vestido-corto-negro-de-corte-skater-de-punto-de-only/prd/202931617?clr=negro&colourWayId=202931620",
+      "imageUrl": "images.asos-media.com/products/vestido-corto-negro-de-corte-skater-de-punto-de-only/202931617-1-black",
+      "videoUrl": "video.asos-media.com/products/vestido-corto-negro-de-corte-skater-de-punto-de-only/202931617-catwalk-AVS",
+      "isSellingFast": false,
+      "sponsoredCampaignId": null
+    },
+    {
+      "id": 203547867,
+      "name": "Vestido corto monocromático plisado de manga larga con estampado de lunares y detalle de botones de ASOS DESIGN",
+      "price": {
+        "current": {
+          "value": 47.99,
+          "text": "47,99 €"
+        },
+        "previous": {
+          "value": null,
+          "text": ""
+        },
+        "rrp": {
+          "value": null,
+          "text": ""
+        },
+        "isMarkedDown": false,
+        "isOutletPrice": false,
+        "currency": "EUR"
+      },
+      "colour": "Monocromático de lunares",
+      "colourWayId": 203547869,
+      "brandName": "ASOS DESIGN",
+      "hasVariantColours": false,
+      "hasMultiplePrices": false,
+      "groupId": null,
+      "productCode": 121378908,
+      "productType": "Product",
+      "url": "asos-design/vestido-corto-monocromatico-plisado-de-manga-larga-con-estampado-de-lunares-y-detalle-de-botones-de-asos-design/prd/203547867?clr=monocromatico-de-lunares&colourWayId=203547869",
+      "imageUrl": "images.asos-media.com/products/vestido-corto-monocromatico-plisado-de-manga-larga-con-estampado-de-lunares-y-detalle-de-botones-de-asos-design/203547867-1-monospot",
+      "videoUrl": null,
+      "isSellingFast": false,
+      "sponsoredCampaignId": null
+    },
+    {
+      "id": 203596771,
+      "name": "Vestido de graduación corto color ciruela con tirantes anudados de terciopelo de Forever New",
+      "price": {
+        "current": {
+          "value": 145.99,
+          "text": "145,99 €"
+        },
+        "previous": {
+          "value": null,
+          "text": ""
+        },
+        "rrp": {
+          "value": null,
+          "text": ""
+        },
+        "isMarkedDown": false,
+        "isOutletPrice": false,
+        "currency": "EUR"
+      },
+      "colour": "Ciruela",
+      "colourWayId": 203596774,
+      "brandName": "Forever New",
+      "hasVariantColours": false,
+      "hasMultiplePrices": false,
+      "groupId": null,
+      "productCode": 121619183,
+      "productType": "Product",
+      "url": "forever-new/vestido-de-graduacion-corto-color-ciruela-con-tirantes-anudados-de-terciopelo-de-forever-new/prd/203596771?clr=ciruela&colourWayId=203596774",
+      "imageUrl": "images.asos-media.com/products/vestido-de-graduacion-corto-color-ciruela-con-tirantes-anudados-de-terciopelo-de-forever-new/203596771-1-plum",
+      "videoUrl": "video.asos-media.com/products/vestido-de-graduacion-corto-color-ciruela-con-tirantes-anudados-de-terciopelo-de-forever-new/203596771-catwalk-AVS",
+      "isSellingFast": false,
+      "sponsoredCampaignId": null
+    },
+    {
+      "id": 203238473,
+      "name": "Vestido corto verde lima metalizado fruncido exclusivo de Collective The Label Petite",
+      "price": {
+        "current": {
+          "value": 69.99,
+          "text": "69,99 €"
+        },
+        "previous": {
+          "value": null,
+          "text": ""
+        },
+        "rrp": {
+          "value": null,
+          "text": ""
+        },
+        "isMarkedDown": false,
+        "isOutletPrice": false,
+        "currency": "EUR"
+      },
+      "colour": "Verde lima",
+      "colourWayId": 203238481,
+      "brandName": "Collective The Label Petite",
+      "hasVariantColours": false,
+      "hasMultiplePrices": false,
+      "groupId": null,
+      "productCode": 120478372,
+      "productType": "Product",
+      "url": "collective-the-label-petite/vestido-corto-verde-lima-metalizado-fruncido-exclusivo-de-collective-the-label-petite/prd/203238473?clr=verde-lima&colourWayId=203238481",
+      "imageUrl": "images.asos-media.com/products/vestido-corto-verde-lima-metalizado-fruncido-exclusivo-de-collective-the-label-petite/203238473-1-limegreen",
+      "videoUrl": "video.asos-media.com/products/vestido-corto-verde-lima-metalizado-fruncido-exclusivo-de-collective-the-label-petite/203238473-catwalk-AVS",
+      "isSellingFast": false,
+      "sponsoredCampaignId": null
+    },
+    {
+      "id": 203783429,
+      "name": "Vestido corto con detalle de volante y estampado de leopardo de Monki",
+      "price": {
+        "current": {
+          "value": 31.99,
+          "text": "31,99 €"
+        },
+        "previous": {
+          "value": null,
+          "text": ""
+        },
+        "rrp": {
+          "value": null,
+          "text": ""
+        },
+        "isMarkedDown": false,
+        "isOutletPrice": false,
+        "currency": "EUR"
+      },
+      "colour": "Estampado leopardo",
+      "colourWayId": 203783430,
+      "brandName": "Monki",
+      "hasVariantColours": false,
+      "hasMultiplePrices": false,
+      "groupId": null,
+      "productCode": 122834762,
+      "productType": "Product",
+      "url": "monki/vestido-corto-con-detalle-de-volante-y-estampado-de-leopardo-de-monki/prd/203783429?clr=estampado-leopardo&colourWayId=203783430",
+      "imageUrl": "images.asos-media.com/products/vestido-corto-con-detalle-de-volante-y-estampado-de-leopardo-de-monki/203783429-1-leopardprint",
+      "videoUrl": "video.asos-media.com/products/vestido-corto-con-detalle-de-volante-y-estampado-de-leopardo-de-monki/203783429-catwalk-AVS",
+      "isSellingFast": false,
+      "sponsoredCampaignId": null
+    },
+    {
+      "id": 203844953,
+      "name": "Vestido corto negro con cinturón de chifón de River Island",
+      "price": {
+        "current": {
+          "value": 68.99,
+          "text": "68,99 €"
+        },
+        "previous": {
+          "value": null,
+          "text": ""
+        },
+        "rrp": {
+          "value": null,
+          "text": ""
+        },
+        "isMarkedDown": false,
+        "isOutletPrice": false,
+        "currency": "EUR"
+      },
+      "colour": "Negro",
+      "colourWayId": 203844954,
+      "brandName": "River Island",
+      "hasVariantColours": false,
+      "hasMultiplePrices": false,
+      "groupId": null,
+      "productCode": 123114236,
+      "productType": "Product",
+      "url": "river-island/vestido-corto-negro-con-cinturon-de-chifon-de-river-island/prd/203844953?clr=negro&colourWayId=203844954",
+      "imageUrl": "images.asos-media.com/products/vestido-corto-negro-con-cinturon-de-chifon-de-river-island/203844953-1-black",
+      "videoUrl": "video.asos-media.com/products/vestido-corto-negro-con-cinturon-de-chifon-de-river-island/203844953-catwalk-AVS",
+      "isSellingFast": false,
+      "sponsoredCampaignId": null
+    },
+    {
+      "id": 203583287,
+      "name": "Vestido corto verde botella estilo babydoll con detalles elásticos de cordones de ASOS DESIGN Tall",
+      "price": {
+        "current": {
+          "value": 28.99,
+          "text": "28,99 €"
+        },
+        "previous": {
+          "value": null,
+          "text": ""
+        },
+        "rrp": {
+          "value": null,
+          "text": ""
+        },
+        "isMarkedDown": false,
+        "isOutletPrice": false,
+        "currency": "EUR"
+      },
+      "colour": "Verde botella",
+      "colourWayId": 203583288,
+      "brandName": "ASOS Tall",
+      "hasVariantColours": false,
+      "hasMultiplePrices": false,
+      "groupId": null,
+      "productCode": 121509202,
+      "productType": "Product",
+      "url": "asos-tall/vestido-corto-verde-botella-estilo-babydoll-con-detalles-elasticos-de-cordones-de-asos-design-tall/prd/203583287?clr=verde-botella&colourWayId=203583288",
+      "imageUrl": "images.asos-media.com/products/vestido-corto-verde-botella-estilo-babydoll-con-detalles-elasticos-de-cordones-de-asos-design-tall/203583287-1-bottlegreen",
+      "videoUrl": "video.asos-media.com/products/vestido-corto-verde-botella-estilo-babydoll-con-detalles-elasticos-de-cordones-de-asos-design-tall/203583287-catwalk-AVS",
+      "isSellingFast": false,
+      "sponsoredCampaignId": null
+    },
+    {
+      "id": 202361688,
+      "name": "Vestido corto rosa escalonado con cuello halter, detalle de abertura y diseño adornado de ASOS DESIGN",
+      "price": {
+        "current": {
+          "value": 77.99,
+          "text": "77,99 €"
+        },
+        "previous": {
+          "value": null,
+          "text": ""
+        },
+        "rrp": {
+          "value": null,
+          "text": ""
+        },
+        "isMarkedDown": false,
+        "isOutletPrice": false,
+        "currency": "EUR"
+      },
+      "colour": "Rosa",
+      "colourWayId": 202361689,
+      "brandName": "ASOS DESIGN",
+      "hasVariantColours": false,
+      "hasMultiplePrices": false,
+      "groupId": null,
+      "productCode": 116461148,
+      "productType": "Product",
+      "url": "asos-design/vestido-corto-rosa-escalonado-con-cuello-halter-detalle-de-abertura-y-diseno-adornado-de-asos-design/prd/202361688?clr=rosa&colourWayId=202361689",
+      "imageUrl": "images.asos-media.com/products/vestido-corto-rosa-escalonado-con-cuello-halter-detalle-de-abertura-y-diseno-adornado-de-asos-design/202361688-1-pink",
+      "videoUrl": "video.asos-media.com/products/vestido-corto-rosa-escalonado-con-cuello-halter-detalle-de-abertura-y-diseno-adornado-de-asos-design/202361688-catwalk-AVS",
+      "isSellingFast": false,
+      "sponsoredCampaignId": null
+    },
+    {
+      "id": 203034150,
+      "name": "Vestido de graduación midi color berenjena con cuello halter, abertura y detalle retorcido de ASOS DESIGN Tall",
+      "price": {
+        "current": {
+          "value": 77.99,
+          "text": "77,99 €"
+        },
+        "previous": {
+          "value": null,
+          "text": ""
+        },
+        "rrp": {
+          "value": null,
+          "text": ""
+        },
+        "isMarkedDown": false,
+        "isOutletPrice": false,
+        "currency": "EUR"
+      },
+      "colour": "Berenjena",
+      "colourWayId": 203034163,
+      "brandName": "ASOS Tall",
+      "hasVariantColours": false,
+      "hasMultiplePrices": false,
+      "groupId": null,
+      "productCode": 119410523,
+      "productType": "Product",
+      "url": "asos-tall/vestido-de-graduacion-midi-color-berenjena-con-cuello-halter-abertura-y-detalle-retorcido-de-asos-design-tall/prd/203034150?clr=berenjena&colourWayId=203034163",
+      "imageUrl": "images.asos-media.com/products/vestido-de-graduacion-midi-color-berenjena-con-cuello-halter-abertura-y-detalle-retorcido-de-asos-design-tall/203034150-1-aubergine",
+      "videoUrl": "video.asos-media.com/products/vestido-de-graduacion-midi-color-berenjena-con-cuello-halter-abertura-y-detalle-retorcido-de-asos-design-tall/203034150-catwalk-AVS",
+      "isSellingFast": false,
+      "sponsoredCampaignId": null
+    },
+    {
+      "id": 203914970,
+      "name": "Vestido corto negro de tirantes de encaje de Trendyol",
+      "price": {
+        "current": {
+          "value": 37.99,
+          "text": "37,99 €"
+        },
+        "previous": {
+          "value": null,
+          "text": ""
+        },
+        "rrp": {
+          "value": null,
+          "text": ""
+        },
+        "isMarkedDown": false,
+        "isOutletPrice": false,
+        "currency": "EUR"
+      },
+      "colour": "Negro",
+      "colourWayId": 203914971,
+      "brandName": "TRENDYOL",
+      "hasVariantColours": false,
+      "hasMultiplePrices": false,
+      "groupId": null,
+      "productCode": 123408620,
+      "productType": "Product",
+      "url": "trendyol/vestido-corto-negro-de-tirantes-de-encaje-de-trendyol/prd/203914970?clr=negro&colourWayId=203914971",
+      "imageUrl": "images.asos-media.com/products/vestido-corto-negro-de-tirantes-de-encaje-de-trendyol/203914970-1-black",
+      "videoUrl": "video.asos-media.com/products/vestido-corto-negro-de-tirantes-de-encaje-de-trendyol/203914970-catwalk-AVS",
+      "isSellingFast": false,
+      "sponsoredCampaignId": null
+    },
+    {
+      "id": 203915043,
+      "name": "Vestido corto negro sin mangas con cuello de pico de Trendyol",
+      "price": {
+        "current": {
+          "value": 37.99,
+          "text": "37,99 €"
+        },
+        "previous": {
+          "value": null,
+          "text": ""
+        },
+        "rrp": {
+          "value": null,
+          "text": ""
+        },
+        "isMarkedDown": false,
+        "isOutletPrice": false,
+        "currency": "EUR"
+      },
+      "colour": "Negro",
+      "colourWayId": 203915044,
+      "brandName": "TRENDYOL",
+      "hasVariantColours": false,
+      "hasMultiplePrices": false,
+      "groupId": null,
+      "productCode": 123408628,
+      "productType": "Product",
+      "url": "trendyol/vestido-corto-negro-sin-mangas-con-cuello-de-pico-de-trendyol/prd/203915043?clr=negro&colourWayId=203915044",
+      "imageUrl": "images.asos-media.com/products/vestido-corto-negro-sin-mangas-con-cuello-de-pico-de-trendyol/203915043-1-black",
+      "videoUrl": "video.asos-media.com/products/vestido-corto-negro-sin-mangas-con-cuello-de-pico-de-trendyol/203915043-catwalk-AVS",
+      "isSellingFast": false,
+      "sponsoredCampaignId": null
+    },
+    {
+      "id": 203241725,
+      "name": "Vestido verde lima iridiscente cruzado de lentejuelas exclusivo de Collective The Label",
+      "price": {
+        "current": {
+          "value": 98.99,
+          "text": "98,99 €"
+        },
+        "previous": {
+          "value": null,
+          "text": ""
+        },
+        "rrp": {
+          "value": null,
+          "text": ""
+        },
+        "isMarkedDown": false,
+        "isOutletPrice": false,
+        "currency": "EUR"
+      },
+      "colour": "Lima iridiscente",
+      "colourWayId": 203241727,
+      "brandName": "Collective The Label",
+      "hasVariantColours": false,
+      "hasMultiplePrices": false,
+      "groupId": null,
+      "productCode": 120478679,
+      "productType": "Product",
+      "url": "collective-the-label/vestido-verde-lima-iridiscente-cruzado-de-lentejuelas-exclusivo-de-collective-the-label/prd/203241725?clr=lima-iridiscente&colourWayId=203241727",
+      "imageUrl": "images.asos-media.com/products/vestido-verde-lima-iridiscente-cruzado-de-lentejuelas-exclusivo-de-collective-the-label/203241725-1-iridescentlime",
+      "videoUrl": "video.asos-media.com/products/vestido-verde-lima-iridiscente-cruzado-de-lentejuelas-exclusivo-de-collective-the-label/203241725-catwalk-AVS",
+      "isSellingFast": false,
+      "sponsoredCampaignId": null
+    },
+    {
+      "id": 200839123,
+      "name": "Vestido corto burdeos evasé de punto de ASOS DESIGN Tall",
+      "price": {
+        "current": {
+          "value": 32.99,
+          "text": "32,99 €"
+        },
+        "previous": {
+          "value": null,
+          "text": ""
+        },
+        "rrp": {
+          "value": null,
+          "text": ""
+        },
+        "isMarkedDown": false,
+        "isOutletPrice": false,
+        "currency": "EUR"
+      },
+      "colour": "Burdeos",
+      "colourWayId": 200839124,
+      "brandName": "ASOS Tall",
+      "hasVariantColours": false,
+      "hasMultiplePrices": false,
+      "groupId": null,
+      "productCode": 106383370,
+      "productType": "Product",
+      "url": "asos-tall/vestido-corto-burdeos-evase-de-punto-de-asos-design-tall/prd/200839123?clr=burdeos&colourWayId=200839124",
+      "imageUrl": "images.asos-media.com/products/vestido-corto-burdeos-evase-de-punto-de-asos-design-tall/200839123-1-burgundy",
+      "videoUrl": "video.asos-media.com/products/vestido-corto-burdeos-evase-de-punto-de-asos-design-tall/200839123-catwalk-AVS",
+      "isSellingFast": false,
+      "sponsoredCampaignId": null
+    },
+    {
+      "id": 201356375,
+      "name": "Vestido corto estilo babydoll de corte skater con godets, abertura en la espalda y estampado llamativo floral de ASOS DESIGN",
+      "price": {
+        "current": {
+          "value": 47.99,
+          "text": "47,99 €"
+        },
+        "previous": {
+          "value": null,
+          "text": ""
+        },
+        "rrp": {
+          "value": null,
+          "text": ""
+        },
+        "isMarkedDown": false,
+        "isOutletPrice": false,
+        "currency": "EUR"
+      },
+      "colour": "Floral llamativo",
+      "colourWayId": 201356377,
+      "brandName": "ASOS DESIGN",
+      "hasVariantColours": false,
+      "hasMultiplePrices": false,
+      "groupId": null,
+      "productCode": 112714280,
+      "productType": "Product",
+      "url": "asos-design/vestido-corto-estilo-babydoll-de-corte-skater-con-godets-abertura-en-la-espalda-y-estampado-llamativo-floral-de-asos-design/prd/201356375?clr=floral-llamativo&colourWayId=201356377",
+      "imageUrl": "images.asos-media.com/products/vestido-corto-estilo-babydoll-de-corte-skater-con-godets-abertura-en-la-espalda-y-estampado-llamativo-floral-de-asos-design/201356375-1-boldfloral",
+      "videoUrl": null,
+      "isSellingFast": false,
+      "sponsoredCampaignId": null
+    },
+    {
+      "id": 202209246,
+      "name": "Vestido corto color oliva a cuadros con escote cuadrado y mangas abullonadas de Madewell",
+      "price": {
+        "current": {
+          "value": 116.99,
+          "text": "116,99 €"
+        },
+        "previous": {
+          "value": null,
+          "text": ""
+        },
+        "rrp": {
+          "value": null,
+          "text": ""
+        },
+        "isMarkedDown": false,
+        "isOutletPrice": false,
+        "currency": "EUR"
+      },
+      "colour": "Oliva especiado",
+      "colourWayId": 202209254,
+      "brandName": "Madewell",
+      "hasVariantColours": false,
+      "hasMultiplePrices": false,
+      "groupId": null,
+      "productCode": 115999249,
+      "productType": "Product",
+      "url": "madewell/vestido-corto-color-oliva-a-cuadros-con-escote-cuadrado-y-mangas-abullonadas-de-madewell/prd/202209246?clr=oliva-especiado&colourWayId=202209254",
+      "imageUrl": "images.asos-media.com/products/vestido-corto-color-oliva-a-cuadros-con-escote-cuadrado-y-mangas-abullonadas-de-madewell/202209246-1-spicedolive",
+      "videoUrl": "video.asos-media.com/products/vestido-corto-color-oliva-a-cuadros-con-escote-cuadrado-y-mangas-abullonadas-de-madewell/202209246-catwalk-AVS",
+      "isSellingFast": false,
+      "sponsoredCampaignId": null
+    },
+    {
+      "id": 203007766,
+      "name": "Vestido corto estilo corsé con estampado de cuadros y flores de satén de Miss Selfridge",
+      "price": {
+        "current": {
+          "value": 64.99,
+          "text": "64,99 €"
+        },
+        "previous": {
+          "value": null,
+          "text": ""
+        },
+        "rrp": {
+          "value": null,
+          "text": ""
+        },
+        "isMarkedDown": false,
+        "isOutletPrice": false,
+        "currency": "EUR"
+      },
+      "colour": "Estampado floral a cuadros",
+      "colourWayId": 203007767,
+      "brandName": "Miss Selfridge",
+      "hasVariantColours": false,
+      "hasMultiplePrices": false,
+      "groupId": null,
+      "productCode": 119335580,
+      "productType": "Product",
+      "url": "miss-selfridge/vestido-corto-estilo-corse-con-estampado-de-cuadros-y-flores-de-saten-de-miss-selfridge/prd/203007766?clr=estampado-floral-a-cuadros&colourWayId=203007767",
+      "imageUrl": "images.asos-media.com/products/vestido-corto-estilo-corse-con-estampado-de-cuadros-y-flores-de-saten-de-miss-selfridge/203007766-1-floralcheckprint",
+      "videoUrl": null,
+      "isSellingFast": false,
+      "sponsoredCampaignId": null
+    },
+    {
+      "id": 203243675,
+      "name": "Vestido corto negro escotado con mangas murciélago de ASOS DESIGN Curve",
+      "price": {
+        "current": {
+          "value": 52.99,
+          "text": "52,99 €"
+        },
+        "previous": {
+          "value": null,
+          "text": ""
+        },
+        "rrp": {
+          "value": null,
+          "text": ""
+        },
+        "isMarkedDown": false,
+        "isOutletPrice": false,
+        "currency": "EUR"
+      },
+      "colour": "Negro",
+      "colourWayId": 203243676,
+      "brandName": "ASOS Curve",
+      "hasVariantColours": false,
+      "hasMultiplePrices": false,
+      "groupId": null,
+      "productCode": 120479151,
+      "productType": "Product",
+      "url": "asos-curve/vestido-corto-negro-escotado-con-mangas-murcielago-de-asos-design-curve/prd/203243675?clr=negro&colourWayId=203243676",
+      "imageUrl": "images.asos-media.com/products/vestido-corto-negro-escotado-con-mangas-murcielago-de-asos-design-curve/203243675-1-black",
+      "videoUrl": null,
+      "isSellingFast": false,
+      "sponsoredCampaignId": null
+    },
+    {
+      "id": 203241135,
+      "name": "Vestido corto azul cobalto metalizado palabra de honor con diseño fruncido exclusivo de Collective The Label",
+      "price": {
+        "current": {
+          "value": 69.99,
+          "text": "69,99 €"
+        },
+        "previous": {
+          "value": null,
+          "text": ""
+        },
+        "rrp": {
+          "value": null,
+          "text": ""
+        },
+        "isMarkedDown": false,
+        "isOutletPrice": false,
+        "currency": "EUR"
+      },
+      "colour": "Azul cobalto metalizado",
+      "colourWayId": 203241157,
+      "brandName": "Collective The Label",
+      "hasVariantColours": false,
+      "hasMultiplePrices": false,
+      "groupId": null,
+      "productCode": 120478676,
+      "productType": "Product",
+      "url": "collective-the-label/vestido-corto-azul-cobalto-metalizado-palabra-de-honor-con-diseno-fruncido-exclusivo-de-collective-the-label/prd/203241135?clr=azul-cobalto-metalizado&colourWayId=203241157",
+      "imageUrl": "images.asos-media.com/products/vestido-corto-azul-cobalto-metalizado-palabra-de-honor-con-diseno-fruncido-exclusivo-de-collective-the-label/203241135-1-metalliccobalt",
+      "videoUrl": "video.asos-media.com/products/vestido-corto-azul-cobalto-metalizado-palabra-de-honor-con-diseno-fruncido-exclusivo-de-collective-the-label/203241135-catwalk-AVS",
+      "isSellingFast": true,
+      "sponsoredCampaignId": null
+    },
+    {
+      "id": 202253546,
+      "name": "Vestido corto amarillo plisado con estampado floral de ASOS DESIGN Petite",
+      "price": {
+        "current": {
+          "value": 70.99,
+          "text": "70,99 €"
+        },
+        "previous": {
+          "value": null,
+          "text": ""
+        },
+        "rrp": {
+          "value": null,
+          "text": ""
+        },
+        "isMarkedDown": false,
+        "isOutletPrice": false,
+        "currency": "EUR"
+      },
+      "colour": "Amarillo con flores",
+      "colourWayId": 202253553,
+      "brandName": "ASOS Petite",
+      "hasVariantColours": false,
+      "hasMultiplePrices": false,
+      "groupId": null,
+      "productCode": 116059272,
+      "productType": "Product",
+      "url": "asos-petite/vestido-corto-amarillo-plisado-con-estampado-floral-de-asos-design-petite/prd/202253546?clr=amarillo-con-flores&colourWayId=202253553",
+      "imageUrl": "images.asos-media.com/products/vestido-corto-amarillo-plisado-con-estampado-floral-de-asos-design-petite/202253546-1-yellowfloral",
+      "videoUrl": "video.asos-media.com/products/vestido-corto-amarillo-plisado-con-estampado-floral-de-asos-design-petite/202253546-catwalk-AVS",
+      "isSellingFast": false,
+      "sponsoredCampaignId": null
+    },
+    {
+      "id": 203119569,
+      "name": "Vestido corto dorado metalizado Aimsie de AllSaints",
+      "price": {
+        "current": {
+          "value": 227.99,
+          "text": "227,99 €"
+        },
+        "previous": {
+          "value": null,
+          "text": ""
+        },
+        "rrp": {
+          "value": null,
+          "text": ""
+        },
+        "isMarkedDown": false,
+        "isOutletPrice": false,
+        "currency": "EUR"
+      },
+      "colour": "Dorado",
+      "colourWayId": 203119570,
+      "brandName": "AllSaints",
+      "hasVariantColours": false,
+      "hasMultiplePrices": false,
+      "groupId": null,
+      "productCode": 119616105,
+      "productType": "Product",
+      "url": "allsaints/vestido-corto-dorado-metalizado-aimsie-de-allsaints/prd/203119569?clr=dorado&colourWayId=203119570",
+      "imageUrl": "images.asos-media.com/products/vestido-corto-dorado-metalizado-aimsie-de-allsaints/203119569-1-gold",
+      "videoUrl": "video.asos-media.com/products/vestido-corto-dorado-metalizado-aimsie-de-allsaints/203119569-catwalk-AVS",
+      "isSellingFast": false,
+      "sponsoredCampaignId": null
+    }
+  ],
+  "facets": [
+    {
+      "id": "freshness_band",
+      "name": "Novedades disponibles desde",
+      "facetValues": [
+        {
+          "count": 2,
+          "id": "1",
+          "name": "Hoy",
+          "isSelected": false
+        },
+        {
+          "count": 1,
+          "id": "2",
+          "name": "Ayer",
+          "isSelected": false
+        },
+        {
+          "count": 10,
+          "id": "3",
+          "name": "Últimos 7 días",
+          "isSelected": false
+        },
+        {
+          "count": 24,
+          "id": "4",
+          "name": "Últimos 14 días",
+          "isSelected": false
+        },
+        {
+          "count": 45,
+          "id": "5",
+          "name": "Últimos 28 días",
+          "isSelected": false
+        }
+      ],
+      "displayStyle": "Single-Column",
+      "facetType": "TextMultiSelect",
+      "hasSelectedValues": false
+    },
+    {
+      "id": "size",
+      "name": "Talla",
+      "facetValues": [
+        {
+          "count": 33,
+          "id": "121",
+          "name": "ES 30",
+          "isSelected": false
+        },
+        {
+          "count": 287,
+          "id": "77",
+          "name": "ES 32",
+          "isSelected": false
+        },
+        {
+          "count": 331,
+          "id": "89",
+          "name": "ES 34",
+          "isSelected": false
+        },
+        {
+          "count": 337,
+          "id": "101",
+          "name": "ES 36",
+          "isSelected": false
+        },
+        {
+          "count": 321,
+          "id": "17",
+          "name": "ES 38",
+          "isSelected": false
+        },
+        {
+          "count": 307,
+          "id": "29",
+          "name": "ES 40",
+          "isSelected": false
+        },
+        {
+          "count": 280,
+          "id": "41",
+          "name": "ES 42",
+          "isSelected": false
+        },
+        {
+          "count": 310,
+          "id": "53",
+          "name": "ES 44",
+          "isSelected": false
+        },
+        {
+          "count": 247,
+          "id": "65",
+          "name": "ES 46",
+          "isSelected": false
+        },
+        {
+          "count": 61,
+          "id": "164",
+          "name": "ES 48",
+          "isSelected": false
+        },
+        {
+          "count": 47,
+          "id": "168",
+          "name": "ES 50",
+          "isSelected": false
+        },
+        {
+          "count": 50,
+          "id": "177",
+          "name": "ES 52",
+          "isSelected": false
+        },
+        {
+          "count": 45,
+          "id": "189",
+          "name": "ES 54",
+          "isSelected": false
+        },
+        {
+          "count": 43,
+          "id": "201",
+          "name": "ES 56",
+          "isSelected": false
+        },
+        {
+          "count": 33,
+          "id": "213",
+          "name": "ES 58",
+          "isSelected": false
+        },
+        {
+          "count": 2,
+          "id": "5134",
+          "name": "2XS",
+          "isSelected": false
+        },
+        {
+          "count": 11,
+          "id": "5182",
+          "name": "XS",
+          "isSelected": false
+        },
+        {
+          "count": 11,
+          "id": "4424",
+          "name": "S",
+          "isSelected": false
+        },
+        {
+          "count": 14,
+          "id": "4412",
+          "name": "M",
+          "isSelected": false
+        },
+        {
+          "count": 11,
+          "id": "5158",
+          "name": "L",
+          "isSelected": false
+        },
+        {
+          "count": 9,
+          "id": "5170",
+          "name": "XL",
+          "isSelected": false
+        },
+        {
+          "count": 5,
+          "id": "5122",
+          "name": "2XL",
+          "isSelected": false
+        },
+        {
+          "count": 1,
+          "id": "1612",
+          "name": "W25",
+          "isSelected": false
+        },
+        {
+          "count": 1,
+          "id": "115",
+          "name": "UK 4",
+          "isSelected": false
+        },
+        {
+          "count": 1,
+          "id": "41215",
+          "name": "UK 4-6",
+          "isSelected": false
+        },
+        {
+          "count": 1,
+          "id": "1636",
+          "name": "W27",
+          "isSelected": false
+        },
+        {
+          "count": 6,
+          "id": "116",
+          "name": "UK 6",
+          "isSelected": false
+        },
+        {
+          "count": 5,
+          "id": "117",
+          "name": "UK 8",
+          "isSelected": false
+        },
+        {
+          "count": 1,
+          "id": "1660",
+          "name": "W29",
+          "isSelected": false
+        },
+        {
+          "count": 2,
+          "id": "18167",
+          "name": "UK 8-10",
+          "isSelected": false
+        },
+        {
+          "count": 5,
+          "id": "15830",
+          "name": "UK 10",
+          "isSelected": false
+        },
+        {
+          "count": 1,
+          "id": "1684",
+          "name": "W31",
+          "isSelected": false
+        },
+        {
+          "count": 4,
+          "id": "15841",
+          "name": "UK 12",
+          "isSelected": false
+        },
+        {
+          "count": 2,
+          "id": "18165",
+          "name": "UK 12-14",
+          "isSelected": false
+        },
+        {
+          "count": 5,
+          "id": "15853",
+          "name": "UK 14",
+          "isSelected": false
+        },
+        {
+          "count": 1,
+          "id": "1708",
+          "name": "W33",
+          "isSelected": false
+        },
+        {
+          "count": 6,
+          "id": "15865",
+          "name": "UK 16",
+          "isSelected": false
+        },
+        {
+          "count": 5,
+          "id": "15877",
+          "name": "UK 18",
+          "isSelected": false
+        },
+        {
+          "count": 1,
+          "id": "15889",
+          "name": "UK 20",
+          "isSelected": false
+        },
+        {
+          "count": 1,
+          "id": "15901",
+          "name": "UK 22",
+          "isSelected": false
+        },
+        {
+          "count": 1,
+          "id": "15913",
+          "name": "UK 24",
+          "isSelected": false
+        },
+        {
+          "count": 1,
+          "id": "15925",
+          "name": "UK 26",
+          "isSelected": false
+        },
+        {
+          "count": 1,
+          "id": "15937",
+          "name": "UK 28",
+          "isSelected": false
+        },
+        {
+          "count": 1,
+          "id": "157",
+          "name": "EU 30",
+          "isSelected": false
+        },
+        {
+          "count": 96,
+          "id": "159",
+          "name": "EU 32",
+          "isSelected": false
+        },
+        {
+          "count": 244,
+          "id": "161",
+          "name": "EU 34",
+          "isSelected": false
+        },
+        {
+          "count": 258,
+          "id": "132",
+          "name": "EU 36",
+          "isSelected": false
+        },
+        {
+          "count": 266,
+          "id": "134",
+          "name": "EU 38",
+          "isSelected": false
+        },
+        {
+          "count": 245,
+          "id": "136",
+          "name": "EU 40",
+          "isSelected": false
+        },
+        {
+          "count": 222,
+          "id": "138",
+          "name": "EU 42",
+          "isSelected": false
+        },
+        {
+          "count": 198,
+          "id": "140",
+          "name": "EU 44",
+          "isSelected": false
+        },
+        {
+          "count": 91,
+          "id": "147",
+          "name": "EU 46",
+          "isSelected": false
+        },
+        {
+          "count": 43,
+          "id": "5299",
+          "name": "EU 48",
+          "isSelected": false
+        },
+        {
+          "count": 44,
+          "id": "5401",
+          "name": "EU 50",
+          "isSelected": false
+        },
+        {
+          "count": 39,
+          "id": "5959",
+          "name": "EU 52",
+          "isSelected": false
+        },
+        {
+          "count": 24,
+          "id": "5963",
+          "name": "EU 54",
+          "isSelected": false
+        },
+        {
+          "count": 15,
+          "id": "5967",
+          "name": "EU 56",
+          "isSelected": false
+        },
+        {
+          "count": 2,
+          "id": "6991",
+          "name": "EU 58",
+          "isSelected": false
+        }
+      ],
+      "displayStyle": "Single-Column",
+      "facetType": "TextMultiSelect",
+      "hasSelectedValues": false
+    },
+    {
+      "id": "range",
+      "name": "Rebajas / Novedades",
+      "facetValues": [
+        {
+          "count": 775,
+          "id": "new_season",
+          "name": "Nueva Colección",
+          "isSelected": false
+        },
+        {
+          "count": 70,
+          "id": "sale",
+          "name": "Ofertas",
+          "isSelected": false
+        }
+      ],
+      "displayStyle": "Single-Column",
+      "facetType": "TextMultiSelect",
+      "hasSelectedValues": false
+    },
+    {
+      "id": "attribute_1046",
+      "name": "Estilo",
+      "facetValues": [
+        {
+          "count": 845,
+          "id": "8299",
+          "name": "Skater",
+          "isSelected": false
+        },
+        {
+          "count": 91,
+          "id": "72004",
+          "name": "Abertura",
+          "isSelected": false
+        },
+        {
+          "count": 62,
+          "id": "72017",
+          "name": "A capas",
+          "isSelected": false
+        },
+        {
+          "count": 53,
+          "id": "8364",
+          "name": "Manga larga",
+          "isSelected": false
+        },
+        {
+          "count": 35,
+          "id": "8332",
+          "name": "Envolventes",
+          "isSelected": false
+        },
+        {
+          "count": 30,
+          "id": "62000",
+          "name": "Espalda al aire",
+          "isSelected": false
+        },
+        {
+          "count": 17,
+          "id": "8318",
+          "name": "Té",
+          "isSelected": false
+        },
+        {
+          "count": 16,
+          "id": "8349",
+          "name": "Hombros descubiertos",
+          "isSelected": false
+        },
+        {
+          "count": 15,
+          "id": "8295",
+          "name": "Camisa",
+          "isSelected": false
+        },
+        {
+          "count": 14,
+          "id": "8307",
+          "name": "Palabra de honor",
+          "isSelected": false
+        },
+        {
+          "count": 13,
+          "id": "72011",
+          "name": "Asimétrico",
+          "isSelected": false
+        },
+        {
+          "count": 10,
+          "id": "8314",
+          "name": "Corte acampanado",
+          "isSelected": false
+        },
+        {
+          "count": 9,
+          "id": "8315",
+          "name": "Bardot",
+          "isSelected": false
+        },
+        {
+          "count": 7,
+          "id": "72016",
+          "name": "Abertura",
+          "isSelected": false
+        },
+        {
+          "count": 4,
+          "id": "61462",
+          "name": "Vestidos cómodos",
+          "isSelected": false
+        },
+        {
+          "count": 3,
+          "id": "10799",
+          "name": "Vestido estilo jersey",
+          "isSelected": false
+        },
+        {
+          "count": 3,
+          "id": "8300",
+          "name": "Combinación",
+          "isSelected": false
+        },
+        {
+          "count": 3,
+          "id": "8336",
+          "name": "Hombros descubiertos",
+          "isSelected": false
+        },
+        {
+          "count": 2,
+          "id": "72002",
+          "name": "Vestido estilo americana",
+          "isSelected": false
+        },
+        {
+          "count": 2,
+          "id": "8301",
+          "name": "Camiseta",
+          "isSelected": false
+        },
+        {
+          "count": 2,
+          "id": "8311",
+          "name": "Vuelo",
+          "isSelected": false
+        },
+        {
+          "count": 2,
+          "id": "8352",
+          "name": "Vaqueros",
+          "isSelected": false
+        },
+        {
+          "count": 1,
+          "id": "61468",
+          "name": "Otros",
+          "isSelected": false
+        },
+        {
+          "count": 1,
+          "id": "72001",
+          "name": "Corte al bies",
+          "isSelected": false
+        },
+        {
+          "count": 1,
+          "id": "72005",
+          "name": "Cola de pez",
+          "isSelected": false
+        },
+        {
+          "count": 1,
+          "id": "72006",
+          "name": "Bajo asimétrico",
+          "isSelected": false
+        },
+        {
+          "count": 1,
+          "id": "8359",
+          "name": "Cuero",
+          "isSelected": false
+        }
+      ],
+      "displayStyle": "Single-Column",
+      "facetType": "TextMultiSelect",
+      "hasSelectedValues": false
+    },
+    {
+      "id": "attribute_10313",
+      "name": "Tipo de vestido",
+      "facetValues": [
+        {
+          "count": 253,
+          "id": "50363",
+          "name": "Vestidos casual",
+          "isSelected": false
+        },
+        {
+          "count": 48,
+          "id": "61432",
+          "name": "Vestidos de damas de honor",
+          "isSelected": false
+        },
+        {
+          "count": 16,
+          "id": "61431",
+          "name": "Vestidos de novia",
+          "isSelected": false
+        },
+        {
+          "count": 10,
+          "id": "50368",
+          "name": "Vestidos de oficina",
+          "isSelected": false
+        },
+        {
+          "count": 321,
+          "id": "50365",
+          "name": "Vestidos para ocasiones especiales",
+          "isSelected": false
+        },
+        {
+          "count": 162,
+          "id": "50364",
+          "name": "Vestidos para salir",
+          "isSelected": false
+        },
+        {
+          "count": 118,
+          "id": "50367",
+          "name": "Vestidos veraniegos",
+          "isSelected": false
+        }
+      ],
+      "displayStyle": "Single-Column",
+      "facetType": "TextMultiSelect",
+      "hasSelectedValues": false
+    },
+    {
+      "id": "brand",
+      "name": "Marca",
+      "facetValues": [
+        {
+          "count": 248,
+          "id": "53",
+          "name": "ASOS DESIGN",
+          "isSelected": false
+        },
+        {
+          "count": 43,
+          "id": "13511",
+          "name": "ASOS Curve",
+          "isSelected": false
+        },
+        {
+          "count": 43,
+          "id": "15719",
+          "name": "ASOS EDITION",
+          "isSelected": false
+        },
+        {
+          "count": 11,
+          "id": "13510",
+          "name": "ASOS Maternity",
+          "isSelected": false
+        },
+        {
+          "count": 48,
+          "id": "13512",
+          "name": "ASOS Petite",
+          "isSelected": false
+        },
+        {
+          "count": 18,
+          "id": "14162",
+          "name": "ASOS Tall",
+          "isSelected": false
+        },
+        {
+          "count": 2,
+          "id": "16119",
+          "name": "& Other Stories",
+          "isSelected": false
+        },
+        {
+          "count": 2,
+          "id": "14370",
+          "name": "Abercrombie & Fitch",
+          "isSelected": false
+        },
+        {
+          "count": 1,
+          "id": "12791",
+          "name": "AllSaints",
+          "isSelected": false
+        },
+        {
+          "count": 1,
+          "id": "14988",
+          "name": "Amy Lynn",
+          "isSelected": false
+        },
+        {
+          "count": 3,
+          "id": "16016",
+          "name": "Anaya",
+          "isSelected": false
+        },
+        {
+          "count": 2,
+          "id": "16400",
+          "name": "Anaya Petite",
+          "isSelected": false
+        },
+        {
+          "count": 14,
+          "id": "16631",
+          "name": "ASOS Luxe",
+          "isSelected": false
+        },
+        {
+          "count": 13,
+          "id": "16575",
+          "name": "AsYou",
+          "isSelected": false
+        },
+        {
+          "count": 1,
+          "id": "14345",
+          "name": "Bardot",
+          "isSelected": false
+        },
+        {
+          "count": 20,
+          "id": "13886",
+          "name": "Closet London",
+          "isSelected": false
+        },
+        {
+          "count": 1,
+          "id": "21550",
+          "name": "Closet London Maternity",
+          "isSelected": false
+        },
+        {
+          "count": 2,
+          "id": "21151",
+          "name": "Closet London Petite",
+          "isSelected": false
+        },
+        {
+          "count": 3,
+          "id": "15113",
+          "name": "Closet London Plus",
+          "isSelected": false
+        },
+        {
+          "count": 2,
+          "id": "21150",
+          "name": "Closet London Tall",
+          "isSelected": false
+        },
+        {
+          "count": 2,
+          "id": "14625",
+          "name": "Club L Maternity",
+          "isSelected": false
+        },
+        {
+          "count": 8,
+          "id": "16097",
+          "name": "Collective The Label",
+          "isSelected": false
+        },
+        {
+          "count": 1,
+          "id": "16638",
+          "name": "Collective the Label Curve",
+          "isSelected": false
+        },
+        {
+          "count": 4,
+          "id": "16412",
+          "name": "Collective The Label Petite",
+          "isSelected": false
+        },
+        {
+          "count": 10,
+          "id": "15878",
+          "name": "Collusion",
+          "isSelected": false
+        },
+        {
+          "count": 3,
+          "id": "14023",
+          "name": "Daisy Street",
+          "isSelected": false
+        },
+        {
+          "count": 3,
+          "id": "15058",
+          "name": "Daisy Street Plus",
+          "isSelected": false
+        },
+        {
+          "count": 2,
+          "id": "16420",
+          "name": "EI8TH HOUR",
+          "isSelected": false
+        },
+        {
+          "count": 1,
+          "id": "16530",
+          "name": "Esmée",
+          "isSelected": false
+        },
+        {
+          "count": 2,
+          "id": "14284",
+          "name": "Fashion Union",
+          "isSelected": false
+        },
+        {
+          "count": 1,
+          "id": "15494",
+          "name": "Fashion Union Plus",
+          "isSelected": false
+        },
+        {
+          "count": 2,
+          "id": "15687",
+          "name": "Flounce London",
+          "isSelected": false
+        },
+        {
+          "count": 1,
+          "id": "15712",
+          "name": "Flounce London Petite",
+          "isSelected": false
+        },
+        {
+          "count": 1,
+          "id": "15709",
+          "name": "Flounce London Plus",
+          "isSelected": false
+        },
+        {
+          "count": 12,
+          "id": "15619",
+          "name": "Forever New",
+          "isSelected": false
+        },
+        {
+          "count": 4,
+          "id": "16406",
+          "name": "Forever New Curve",
+          "isSelected": false
+        },
+        {
+          "count": 7,
+          "id": "15751",
+          "name": "Forever New Petite",
+          "isSelected": false
+        },
+        {
+          "count": 3,
+          "id": "3454",
+          "name": "Free People",
+          "isSelected": false
+        },
+        {
+          "count": 4,
+          "id": "224",
+          "name": "French Connection",
+          "isSelected": false
+        },
+        {
+          "count": 1,
+          "id": "13138",
+          "name": "Glamorous",
+          "isSelected": false
+        },
+        {
+          "count": 1,
+          "id": "15718",
+          "name": "Glamorous Curve",
+          "isSelected": false
+        },
+        {
+          "count": 1,
+          "id": "14821",
+          "name": "Hope & Ivy",
+          "isSelected": false
+        },
+        {
+          "count": 12,
+          "id": "15900",
+          "name": "In The Style",
+          "isSelected": false
+        },
+        {
+          "count": 10,
+          "id": "16191",
+          "name": "In The Style Plus",
+          "isSelected": false
+        },
+        {
+          "count": 1,
+          "id": "13991",
+          "name": "JDY",
+          "isSelected": false
+        },
+        {
+          "count": 2,
+          "id": "13563",
+          "name": "John Zack",
+          "isSelected": false
+        },
+        {
+          "count": 2,
+          "id": "16434",
+          "name": "Labelrail",
+          "isSelected": false
+        },
+        {
+          "count": 8,
+          "id": "15301",
+          "name": "Lace & Beads",
+          "isSelected": false
+        },
+        {
+          "count": 5,
+          "id": "16315",
+          "name": "Lace & Beads Plus",
+          "isSelected": false
+        },
+        {
+          "count": 2,
+          "id": "13575",
+          "name": "Little Mistress",
+          "isSelected": false
+        },
+        {
+          "count": 1,
+          "id": "14444",
+          "name": "Little Mistress Plus",
+          "isSelected": false
+        },
+        {
+          "count": 12,
+          "id": "14612",
+          "name": "Love Triangle",
+          "isSelected": false
+        },
+        {
+          "count": 1,
+          "id": "18052",
+          "name": "Madewell",
+          "isSelected": false
+        },
+        {
+          "count": 2,
+          "id": "12359",
+          "name": "Mama.licious",
+          "isSelected": false
+        },
+        {
+          "count": 1,
+          "id": "12117",
+          "name": "Mango",
+          "isSelected": false
+        },
+        {
+          "count": 10,
+          "id": "15368",
+          "name": "Maya",
+          "isSelected": false
+        },
+        {
+          "count": 1,
+          "id": "14725",
+          "name": "Maya Maternity",
+          "isSelected": false
+        },
+        {
+          "count": 5,
+          "id": "14327",
+          "name": "Maya Petite",
+          "isSelected": false
+        },
+        {
+          "count": 1,
+          "id": "15600",
+          "name": "Maya Plus",
+          "isSelected": false
+        },
+        {
+          "count": 1,
+          "id": "14810",
+          "name": "Maya Tall",
+          "isSelected": false
+        },
+        {
+          "count": 7,
+          "id": "14590",
+          "name": "Missguided",
+          "isSelected": false
+        },
+        {
+          "count": 2,
+          "id": "15067",
+          "name": "Missguided Maternity",
+          "isSelected": false
+        },
+        {
+          "count": 4,
+          "id": "15028",
+          "name": "Missguided Petite",
+          "isSelected": false
+        },
+        {
+          "count": 33,
+          "id": "15128",
+          "name": "Miss Selfridge",
+          "isSelected": false
+        },
+        {
+          "count": 5,
+          "id": "15129",
+          "name": "Miss Selfridge Petite",
+          "isSelected": false
+        },
+        {
+          "count": 2,
+          "id": "14012",
+          "name": "Monki",
+          "isSelected": false
+        },
+        {
+          "count": 1,
+          "id": "479",
+          "name": "Morgan",
+          "isSelected": false
+        },
+        {
+          "count": 1,
+          "id": "15883",
+          "name": "NA-KD",
+          "isSelected": false
+        },
+        {
+          "count": 1,
+          "id": "14510",
+          "name": "Never Fully Dressed",
+          "isSelected": false
+        },
+        {
+          "count": 1,
+          "id": "13817",
+          "name": "New Look",
+          "isSelected": false
+        },
+        {
+          "count": 1,
+          "id": "14119",
+          "name": "New Look Petite",
+          "isSelected": false
+        },
+        {
+          "count": 1,
+          "id": "14248",
+          "name": "New Look Tall",
+          "isSelected": false
+        },
+        {
+          "count": 3,
+          "id": "15237",
+          "name": "Nobody's Child",
+          "isSelected": false
+        },
+        {
+          "count": 3,
+          "id": "16682",
+          "name": "Nobody's Child Plus",
+          "isSelected": false
+        },
+        {
+          "count": 2,
+          "id": "21200",
+          "name": "Nobody’s Child Petite",
+          "isSelected": false
+        },
+        {
+          "count": 2,
+          "id": "13850",
+          "name": "Only",
+          "isSelected": false
+        },
+        {
+          "count": 1,
+          "id": "15827",
+          "name": "Only Petite",
+          "isSelected": false
+        },
+        {
+          "count": 5,
+          "id": "3040",
+          "name": "Pieces",
+          "isSelected": false
+        },
+        {
+          "count": 1,
+          "id": "17951",
+          "name": "Pieces Petite",
+          "isSelected": false
+        },
+        {
+          "count": 1,
+          "id": "17950",
+          "name": "Pieces Tall",
+          "isSelected": false
+        },
+        {
+          "count": 4,
+          "id": "14599",
+          "name": "Pimkie",
+          "isSelected": false
+        },
+        {
+          "count": 2,
+          "id": "16204",
+          "name": "Pretty Lavish",
+          "isSelected": false
+        },
+        {
+          "count": 1,
+          "id": "16637",
+          "name": "Pretty Lavish Curve",
+          "isSelected": false
+        },
+        {
+          "count": 2,
+          "id": "12769",
+          "name": "Reclaimed Vintage",
+          "isSelected": false
+        },
+        {
+          "count": 14,
+          "id": "12983",
+          "name": "River Island",
+          "isSelected": false
+        },
+        {
+          "count": 6,
+          "id": "15230",
+          "name": "River Island Petite",
+          "isSelected": false
+        },
+        {
+          "count": 1,
+          "id": "15068",
+          "name": "River Island Plus",
+          "isSelected": false
+        },
+        {
+          "count": 3,
+          "id": "16592",
+          "name": "River Island Tall",
+          "isSelected": false
+        },
+        {
+          "count": 1,
+          "id": "16256",
+          "name": "Saint Genies",
+          "isSelected": false
+        },
+        {
+          "count": 1,
+          "id": "16317",
+          "name": "Saint Genies Plus",
+          "isSelected": false
+        },
+        {
+          "count": 1,
+          "id": "12840",
+          "name": "Selected",
+          "isSelected": false
+        },
+        {
+          "count": 5,
+          "id": "15586",
+          "name": "Simply Be",
+          "isSelected": false
+        },
+        {
+          "count": 8,
+          "id": "13116",
+          "name": "sister jane",
+          "isSelected": false
+        },
+        {
+          "count": 1,
+          "id": "20453",
+          "name": "Sister Jane Plus",
+          "isSelected": false
+        },
+        {
+          "count": 5,
+          "id": "16337",
+          "name": "Style Cheat",
+          "isSelected": false
+        },
+        {
+          "count": 1,
+          "id": "716",
+          "name": "TFNC",
+          "isSelected": false
+        },
+        {
+          "count": 5,
+          "id": "20201",
+          "name": "The Frolic",
+          "isSelected": false
+        },
+        {
+          "count": 2,
+          "id": "20251",
+          "name": "The Frolic Plus",
+          "isSelected": false
+        },
+        {
+          "count": 23,
+          "id": "16305",
+          "name": "Topshop",
+          "isSelected": false
+        },
+        {
+          "count": 8,
+          "id": "16307",
+          "name": "Topshop Petite",
+          "isSelected": false
+        },
+        {
+          "count": 4,
+          "id": "16308",
+          "name": "Topshop Tall",
+          "isSelected": false
+        },
+        {
+          "count": 10,
+          "id": "18700",
+          "name": "TRENDYOL",
+          "isSelected": false
+        },
+        {
+          "count": 2,
+          "id": "16122",
+          "name": "Twisted Wunder",
+          "isSelected": false
+        },
+        {
+          "count": 1,
+          "id": "16352",
+          "name": "Twisted Wunder Plus",
+          "isSelected": false
+        },
+        {
+          "count": 8,
+          "id": "16715",
+          "name": "Urban Revivo",
+          "isSelected": false
+        },
+        {
+          "count": 1,
+          "id": "765",
+          "name": "Vans",
+          "isSelected": false
+        },
+        {
+          "count": 2,
+          "id": "3098",
+          "name": "Vero Moda",
+          "isSelected": false
+        },
+        {
+          "count": 1,
+          "id": "15812",
+          "name": "Vero Moda Curve",
+          "isSelected": false
+        },
+        {
+          "count": 1,
+          "id": "14457",
+          "name": "Vero Moda Tall",
+          "isSelected": false
+        },
+        {
+          "count": 6,
+          "id": "3663",
+          "name": "Vila",
+          "isSelected": false
+        },
+        {
+          "count": 1,
+          "id": "16634",
+          "name": "Vila Curve",
+          "isSelected": false
+        },
+        {
+          "count": 1,
+          "id": "16173",
+          "name": "Vila Petite",
+          "isSelected": false
+        },
+        {
+          "count": 1,
+          "id": "3606",
+          "name": "Whistles",
+          "isSelected": false
+        },
+        {
+          "count": 3,
+          "id": "13987",
+          "name": "Y.A.S",
+          "isSelected": false
+        },
+        {
+          "count": 3,
+          "id": "15034",
+          "name": "Yours",
+          "isSelected": false
+        }
+      ],
+      "displayStyle": "Single-Column",
+      "facetType": "TextMultiSelect",
+      "hasSelectedValues": false
+    },
+    {
+      "id": "base_colour",
+      "name": "Color",
+      "facetValues": [
+        {
+          "count": 30,
+          "id": "6",
+          "name": "Amarillo",
+          "isSelected": false
+        },
+        {
+          "count": 57,
+          "id": "3",
+          "name": "Azul",
+          "isSelected": false
+        },
+        {
+          "count": 22,
+          "id": "33",
+          "name": "Azul marino",
+          "isSelected": false
+        },
+        {
+          "count": 20,
+          "id": "37",
+          "name": "Beis neutro",
+          "isSelected": false
+        },
+        {
+          "count": 112,
+          "id": "5",
+          "name": "Blanco",
+          "isSelected": false
+        },
+        {
+          "count": 5,
+          "id": "11",
+          "name": "Dorado",
+          "isSelected": false
+        },
+        {
+          "count": 3,
+          "id": "16",
+          "name": "Gris",
+          "isSelected": false
+        },
+        {
+          "count": 18,
+          "id": "10",
+          "name": "Marrón",
+          "isSelected": false
+        },
+        {
+          "count": 198,
+          "id": "17",
+          "name": "Multicolor",
+          "isSelected": false
+        },
+        {
+          "count": 28,
+          "id": "7",
+          "name": "Naranja",
+          "isSelected": false
+        },
+        {
+          "count": 109,
+          "id": "4",
+          "name": "Negro",
+          "isSelected": false
+        },
+        {
+          "count": 2,
+          "id": "12",
+          "name": "Plateado",
+          "isSelected": false
+        },
+        {
+          "count": 28,
+          "id": "1",
+          "name": "Rojo",
+          "isSelected": false
+        },
+        {
+          "count": 89,
+          "id": "9",
+          "name": "Rosa",
+          "isSelected": false
+        },
+        {
+          "count": 89,
+          "id": "2",
+          "name": "Verde",
+          "isSelected": false
+        },
+        {
+          "count": 35,
+          "id": "8",
+          "name": "Violeta",
+          "isSelected": false
+        }
+      ],
+      "displayStyle": "Single-Column",
+      "facetType": "TextMultiSelect",
+      "hasSelectedValues": false
+    },
+    {
+      "id": "attribute_10156",
+      "name": "Largo de la manga",
+      "facetValues": [
+        {
+          "count": 258,
+          "id": "50478",
+          "name": "Manga corta",
+          "isSelected": false
+        },
+        {
+          "count": 312,
+          "id": "50477",
+          "name": "Manga larga",
+          "isSelected": false
+        },
+        {
+          "count": 258,
+          "id": "50479",
+          "name": "Sin mangas",
+          "isSelected": false
+        },
+        {
+          "count": 8,
+          "id": "61439",
+          "name": "Una sola manga",
+          "isSelected": false
+        }
+      ],
+      "displayStyle": "Single-Column",
+      "facetType": "TextMultiSelect",
+      "hasSelectedValues": false
+    },
+    {
+      "id": "attribute_10155",
+      "name": "Silueta",
+      "facetValues": [
+        {
+          "count": 592,
+          "id": "6764",
+          "name": "Colección principal",
+          "isSelected": false
+        },
+        {
+          "count": 1,
+          "id": "60769",
+          "name": "Copas grandes",
+          "isSelected": false
+        },
+        {
+          "count": 98,
+          "id": "6403",
+          "name": "Petite",
+          "isSelected": false
+        },
+        {
+          "count": 19,
+          "id": "6400",
+          "name": "Premamá",
+          "isSelected": false
+        },
+        {
+          "count": 32,
+          "id": "6399",
+          "name": "Tall",
+          "isSelected": false
+        },
+        {
+          "count": 103,
+          "id": "7699",
+          "name": "Tallas grandes",
+          "isSelected": false
+        }
+      ],
+      "displayStyle": "Single-Column",
+      "facetType": "TextMultiSelect",
+      "hasSelectedValues": false
+    },
+    {
+      "id": "attribute_10140",
+      "name": "Largo",
+      "facetValues": [
+        {
+          "count": 60,
+          "id": "3680",
+          "name": "Maxi",
+          "isSelected": false
+        },
+        {
+          "count": 185,
+          "id": "3679",
+          "name": "Midi",
+          "isSelected": false
+        },
+        {
+          "count": 600,
+          "id": "3677",
+          "name": "Mini",
+          "isSelected": false
+        }
+      ],
+      "displayStyle": "Single-Column",
+      "facetType": "TextMultiSelect",
+      "hasSelectedValues": false
+    },
+    {
+      "id": "currentprice",
+      "name": "Precio",
+      "facetValues": [
+        {
+          "count": 2,
+          "id": "12.99",
+          "name": "12.99",
+          "isSelected": false
+        },
+        {
+          "count": 1,
+          "id": "261.99",
+          "name": "261.99",
+          "isSelected": false
+        }
+      ],
+      "displayStyle": "Price-Slider",
+      "facetType": "Range",
+      "hasSelectedValues": false
+    }
+  ],
+  "diagnostics": {
+    "requestId": "a21aa758-b087-4489-a581-0b7e135a6610",
+    "processingTime": 338,
+    "queryTime": 153,
+    "recommendationsEnabled": false,
+    "recommendationsAnalytics": {
+      "personalisationStatus": 5,
+      "numberOfItems": 0,
+      "numberOfRecs": 0,
+      "personalisationType": "",
+      "items": []
+    }
+  },
+  "searchPassMeta": {
+    "isPartial": false,
+    "isSpellcheck": false,
+    "searchPass": [],
+    "alternateSearchTerms": []
+  },
+  "queryId": null,
+  "discoverSearchProductTypes": [],
+  "campaigns": {
+    "promoBanners": [],
+    "imageTiles": [],
+    "sponsoredProducts": []
+  }
+}
