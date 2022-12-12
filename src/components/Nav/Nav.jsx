@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import styled from "styled-components";
-import { FiSearch, FiUser, FiShoppingBag } from "react-icons/fi";
+import { FiSearch, FiUser, FiShoppingBag, FiHeart } from "react-icons/fi";
 import NavMovilPrincipal from "./NavMovil/NavMovilPrincipal";
 import NavDeskPrincipal from "./NavDesk/NavDeskPrincipal";
 import useGeneros from "../../hooks/useGeneros";
@@ -44,8 +44,10 @@ const Logo = styled.p`
   display: flex;
   align-items: center;
   font-size: 32px;
-  padding-right: 20px;
   margin-right: auto;
+  @media (min-width: 1024px) {
+    padding-right: 20px;
+  }
 `;
 
 const BotonGenero = styled.button`
@@ -104,12 +106,15 @@ const Buscador = styled.form`
 const Icono = styled.button`
   background: none;
   border: none;
-  padding: 12px 15px;
+  padding: 10px;
   svg {
     color: white;
     width: 22px;
     height: 22px;
     stroke-width: 3;
+  }
+  @media (min-width: 480px) {
+    padding: 15px;
   }
   @media (min-width: 768px) {
     &.buscador {
@@ -118,8 +123,8 @@ const Icono = styled.button`
   }
 `;
 
-const Navegacion = ({ genero }) => {
-  const { contenidoHombre, contenidoMujer } = useGeneros();
+const Navegacion = ({ genero, navegacion }) => {
+  const { contenidoGenero } = useGeneros({ navegacion, genero });
   const [visible, setvisible] = useState(false);
 
   const handleClick = () => {
@@ -151,9 +156,16 @@ const Navegacion = ({ genero }) => {
         <Icono className="buscador">
           <FiSearch></FiSearch>
         </Icono>
-        <Icono>
-          <FiUser></FiUser>
-        </Icono>
+        <Link to="/usuario/panelUsuario">
+          <Icono>
+            <FiUser></FiUser>
+          </Icono>
+        </Link>
+        <Link to="/usuario/guardados">
+          <Icono>
+            <FiHeart></FiHeart>
+          </Icono>
+        </Link>
         <Icono>
           <FiShoppingBag></FiShoppingBag>
         </Icono>
@@ -161,12 +173,10 @@ const Navegacion = ({ genero }) => {
       <NavMovilPrincipal
         visible={visible}
         setvisible={setvisible}
-        contenido={genero == "hombre" ? contenidoHombre : contenidoMujer}
+        contenido={contenidoGenero}
         genero={genero}
       />
-      <NavDeskPrincipal
-        contenido={genero == "hombre" ? contenidoHombre : contenidoMujer}
-      />
+      <NavDeskPrincipal contenido={contenidoGenero} genero={genero} />
     </>
   );
 };
