@@ -1,4 +1,3 @@
-import React from "react";
 import jsonData from "../data/categoriasEsp.json";
 import { useState, useEffect } from "react";
 
