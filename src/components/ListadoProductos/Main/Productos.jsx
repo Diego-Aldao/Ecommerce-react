@@ -2,6 +2,8 @@ import React from "react";
 import styled from "styled-components";
 import { AiOutlineHeart } from "react-icons/ai";
 import { Link } from "wouter";
+import { useContext } from "react";
+import GuardadosContext from "../../../context/GuardadosContext";
 
 const Producto = styled.div`
   position: relative;
@@ -57,9 +59,32 @@ const Favorito = styled.div`
     height: 20px;
     width: 20px;
   }
+  &:hover {
+    background: var(--gradiente-principal);
+    svg {
+      color: red;
+    }
+  }
 `;
 
 const Productos = ({ productos }) => {
+  const { guardados, setGuardados } = useContext(GuardadosContext);
+  const handleClick = (producto) => {
+    let arrGuardados = [];
+    if (!localStorage.getItem("Guardados")) {
+      arrGuardados.push(producto);
+      localStorage.setItem("Guardados", JSON.stringify(arrGuardados));
+    } else {
+      arrGuardados = JSON.parse(localStorage.getItem("Guardados"));
+      arrGuardados.push(producto);
+      localStorage.setItem("Guardados", JSON.stringify(arrGuardados));
+    }
+    setGuardados((oldGuardados) => [...oldGuardados, producto]);
+    console.log(
+      JSON.parse(localStorage.getItem("Guardados")),
+      "click guardados"
+    );
+  };
   return (
     <>
       {productos.map((producto) => {
@@ -86,10 +111,14 @@ const Productos = ({ productos }) => {
                   <span>{producto.price.current.text}</span>
                 )}
               </Precios>
-              <Favorito>
-                <AiOutlineHeart></AiOutlineHeart>
-              </Favorito>
             </Link>
+            <Favorito
+              onClick={() => {
+                handleClick(producto);
+              }}
+            >
+              <AiOutlineHeart></AiOutlineHeart>
+            </Favorito>
           </Producto>
         );
       })}
