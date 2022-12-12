@@ -42,7 +42,7 @@ const useContentHome = ({ genero }) => {
     setDescuentoHome(descuento[0]);
     setPromocionHome(promocion[0].children);
     setMarcasHome(marcas[0].children);
-  }, []);
+  }, [genero]);
 
   return { gridHome, heroHome, descuentoHome, promocionHome, marcasHome };
 };
