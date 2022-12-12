@@ -1,4 +1,5 @@
 import React from "react";
+import { useState } from "react";
 import styled from "styled-components";
 import { useLocation } from "wouter";
 import useDestino from "../../../hooks/useDestino";
@@ -211,6 +212,8 @@ const Categoria = styled.li`
 
 const Dropdown = ({ hijos, visible, setVisible }) => {
   const [location, setLocation] = useLocation();
+  const [currentLink, setCurrentLink] = useState("");
+  const { linkFormateado } = useDestino(currentLink);
 
   const handleMouseOver = () => {
     setVisible(true);
@@ -220,8 +223,8 @@ const Dropdown = ({ hijos, visible, setVisible }) => {
   };
 
   const handleLocation = (link) => {
-    const { destino } = useDestino(link);
-    setLocation(destino);
+    setCurrentLink(link);
+    setLocation(linkFormateado);
   };
 
   const hijosDesk = hijos
