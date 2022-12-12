@@ -5,6 +5,7 @@ import { FiSearch } from "react-icons/fi";
 import { AiOutlineCheck, AiOutlineClose } from "react-icons/ai";
 import styled from "styled-components";
 import useFiltro from "../../../../hooks/useFiltro";
+import { useEffect } from "react";
 
 const Header = styled.div`
   width: 100%;
@@ -42,15 +43,22 @@ const Buscador = styled.div`
 `;
 
 const DetalleFiltro = ({ filtro, setPosicion }) => {
+  const [currentFiltro, setCurrentFiltro] = useState();
+
+  useEffect(() => {
+    setCurrentFiltro(filtro);
+  }, [filtro]);
+
   const { handleCheck, handleCheckAll, handleDeleteAll, seleccionados } =
     useFiltro();
+  console.log(seleccionados);
 
   const handleClick = () => {
     setPosicion((prevValue) => !prevValue);
   };
 
-  const items = filtro
-    ? filtro.valores.map((item) => {
+  const items = currentFiltro
+    ? currentFiltro.map((item) => {
         return (
           <li
             key={item.id}
@@ -82,7 +90,7 @@ const DetalleFiltro = ({ filtro, setPosicion }) => {
               <span
                 className="check"
                 onClick={() => {
-                  handleDeleteAll(filtro.valores);
+                  handleDeleteAll(currentFiltro.facetValues);
                 }}
               >
                 borrar <AiOutlineClose></AiOutlineClose>
@@ -91,7 +99,7 @@ const DetalleFiltro = ({ filtro, setPosicion }) => {
               <span
                 className="check"
                 onClick={() => {
-                  handleCheckAll(filtro.valores);
+                  handleCheckAll(currentFiltro.facetValues);
                 }}
               >
                 todos <AiOutlineCheck></AiOutlineCheck>
