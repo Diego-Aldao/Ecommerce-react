@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import Link from "wouter";
 import { FiTrash } from "react-icons/fi";
 import { useContext } from "react";
 import GuardadosContext from "../../context/GuardadosContext";
@@ -117,7 +116,6 @@ const ItemGuardado = ({ item }) => {
       localStorage.setItem("Carrito", JSON.stringify(arrCarrito));
     }
     setCarrito((oldCarrito) => [...oldCarrito, itemAñadido]);
-    console.log(JSON.parse(localStorage.getItem("Carrito")), "click carrito");
   };
 
   const eliminarGuardado = (itemGuardado) => {
